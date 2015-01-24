@@ -90,6 +90,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11415140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,7 +128,7 @@ MonoBehaviour:
   gravity: 50
   terminalVelocity: 50
   maxSpeed: 10
-  jumpSpeed: 15
+  jumpSpeed: 8
   maxAcceleration: .899999976
   maxJumpDuration: .25
   strikeCoolDown: .400000006
