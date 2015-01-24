@@ -54,7 +54,7 @@ public class Holdable : MonoBehaviour {
 	{
 		if(mySpawner != null)
 		{
-			mySpawner.GetGrabbed();
+			mySpawner.GetGrabbed(newHolder.GetComponent<Shooter>());
 			mySpawner = null;
 		}
 		var attack = newHolder.GetComponent<PlayerAttack>();

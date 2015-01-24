@@ -104,10 +104,11 @@ public class WeaponSpawner : MonoBehaviour {
 
 	}
 
-	public void GetGrabbed()
+	public void GetGrabbed(Shooter s)
 	{
 		grabbed = true;
 		theSprite.enabled = true;
+		GameController.activeProjectile = s.name;
 	}
 
 	private void ChooseRandomWeapon()
