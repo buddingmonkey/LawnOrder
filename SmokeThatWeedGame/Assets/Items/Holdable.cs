@@ -8,20 +8,27 @@ public class Holdable : MonoBehaviour {
 	public float droppedCoolDown = 1f;
 	public float dropSpeed = 10f;
 	protected float coolDownTimer;
+	protected WeaponSpawner mySpawner;
 
 	// Use this for initialization
 	void Start () {
 	
 	}
-	
+
+	public void RememberSpawner(WeaponSpawner spawner)
+	{
+		mySpawner = spawner;
+		rigidbody2D.isKinematic = true;
+	}
+
 	// Update is called once per frame
-	protected void BaseUpdate () {
+	protected void Update () {
 		if (!beingHeld) {
 			if(canBeHeld)
 			{
 				return;
 			}
-			
+			print (coolDownTimer);
 			if(coolDownTimer>0)//cool down pickup time when not being held
 			{
 				coolDownTimer-=Time.deltaTime;
@@ -44,6 +51,10 @@ public class Holdable : MonoBehaviour {
 
 	public virtual void GetHeld(CharacterMovement newHolder)
 	{
+		if(mySpawner != null)
+		{
+			mySpawner.GetGrabbed();
+		}
 		var attack = newHolder.GetComponent<PlayerAttack>();
 		if (attack.holdItem != null) return;
 		attack.holdItem = this;

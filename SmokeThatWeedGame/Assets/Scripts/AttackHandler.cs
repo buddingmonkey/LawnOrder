@@ -10,7 +10,8 @@ public class AttackHandler : MonoBehaviour {
 	public void OnTriggerEnter2D(Collider2D collider) {
 		if (collider.tag.Equals("Enemy")) {
 			var enemy = collider.GetComponentInParent<BaseEnemy>();
-			enemy.TakeDamage(damage, (collider.transform.position - transform.position).normalized, player.playerNum);
+			Vector2 dir = new Vector2((collider.transform.position - transform.position).x > 0 ? 1 : -1, 0);
+			enemy.TakeDamage(damage, dir, player.playerNum);
 
 			if (stopAfterHit) {
 				Destroy (gameObject);
