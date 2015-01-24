@@ -50,7 +50,7 @@ public class InputControls : MonoBehaviour {
 		}
 
 		InputControl ctrl = device.GetControl (InputControlType.Action2);
-		return ctrl.IsPressed && ctrl.HasChanged;
+		return ctrl.IsPressed;
 	}
 
 	public bool Throw(){
