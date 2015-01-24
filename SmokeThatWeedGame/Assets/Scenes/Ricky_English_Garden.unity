@@ -309,7 +309,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 4722596b884fd40a19b38fd0d5514a06, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4722596b884fd40a19b38fd0d5514a06, type: 2}
@@ -4784,7 +4784,7 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 1835275639}
   m_GameObject: {fileID: 315261435}
-  m_Mass: 1
+  m_Mass: 9.99999975e-05
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1.5
@@ -5815,7 +5815,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 4722596b884fd40a19b38fd0d5514a06, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4722596b884fd40a19b38fd0d5514a06, type: 2}
@@ -8671,7 +8671,7 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 11107366}
   m_GameObject: {fileID: 732462660}
-  m_Mass: 1
+  m_Mass: 9.99999975e-05
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1.5
@@ -13442,7 +13442,7 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 1746125294}
   m_GameObject: {fileID: 1461284389}
-  m_Mass: 1
+  m_Mass: 9.99999975e-05
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1.5
@@ -14386,6 +14386,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1605330224}
   - 114: {fileID: 1605330223}
+  - 114: {fileID: 1605330225}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -14405,6 +14406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f68218a1d03247f7bb40a38a478cec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 169986, guid: 2d1ad2580ebaf460a927e0e701c71f35, type: 2}
   spawners:
   - {fileID: 1155801021}
   - {fileID: 1255205842}
@@ -14423,6 +14425,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!114 &1605330225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11438308, guid: 48293c12e4c524775b8c772256f33784,
+    type: 2}
+  m_PrefabInternal: {fileID: 1274078874}
+  m_GameObject: {fileID: 1605330222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnFrequency: 3
+  spawnDelay: 1
+  randomStart: 0
 --- !u!1 &1607002328
 GameObject:
   m_ObjectHideFlags: 0
@@ -14449,7 +14466,7 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 438874833}
   m_GameObject: {fileID: 1607002328}
-  m_Mass: 1
+  m_Mass: 9.99999975e-05
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1.5
@@ -14555,7 +14572,7 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 1382293231}
   m_GameObject: {fileID: 1613456939}
-  m_Mass: 1
+  m_Mass: 9.99999975e-05
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1.5
