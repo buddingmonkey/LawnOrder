@@ -34,15 +34,16 @@ public class EnemySpawner : MonoBehaviour {
 	void Spawn() {
 		GameObject enemy = (GameObject) Instantiate(GameController.Instance.enemyPrefab);
 		enemy.transform.position = transform.position;
+		var baseEnemy = enemy.GetComponent<BaseEnemy> ();
 		switch (direction) {
 		case Direction.Left:
-			enemy.direction = -1;
+			baseEnemy.direction = -1;
 			break;
 		case Direction.Right:
-			enemy.direction = 1;
+			baseEnemy.direction = 1;
 			break;
 		default:
-			enemy.direction = Random.Range(0,2) == 0 ? -1 : 1;
+			baseEnemy.direction = Random.Range(0,2) == 0 ? -1 : 1;
 			break;
 		}
 	}
