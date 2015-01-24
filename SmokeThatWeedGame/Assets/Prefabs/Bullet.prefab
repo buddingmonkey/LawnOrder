@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21254046}
   - 114: {fileID: 11493798}
   - 61: {fileID: 6141116}
-  - 114: {fileID: 11492196}
+  - 114: {fileID: 11415026}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -42,7 +42,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 1, y: 1}
   m_Center: {x: 0, y: 0}
---- !u!114 &11492196
+--- !u!114 &11415026
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  player: {fileID: 0}
+  stopAfterHit: 1
 --- !u!114 &11493798
 MonoBehaviour:
   m_ObjectHideFlags: 1
