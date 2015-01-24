@@ -29,8 +29,11 @@ public class GameController : MonoBehaviour {
 
 	public Transform playerPrefab;
 
+	private Transform[] currentPlayers;
+
 	void Awake () {
 		_instance = this;
+		currentPlayers = new Transform[4];
 	}
 
 	// Use this for initialization
@@ -46,6 +49,12 @@ public class GameController : MonoBehaviour {
 	void Update () {
 	}
 
+	public void EndRound(){
+		foreach (Transform t in currentPlayers){
+			Destroy(t.gameObject);
+		}
+	}
+
 	public static void Reset() {
 		state = GameState.Start;
 		round = 1;
@@ -59,5 +68,8 @@ public class GameController : MonoBehaviour {
 		Transform player = (Transform) Instantiate(playerPrefab);
 		player.position = spawners[playerNum].position;
 		player.GetComponent<SimplePlayer>().playerNum = playerNum;
+		currentPlayers[playerNum] = player;
+		player.name = "Player" + playerNum;
+		player.parent = spawners[playerNum];
 	}
 }
