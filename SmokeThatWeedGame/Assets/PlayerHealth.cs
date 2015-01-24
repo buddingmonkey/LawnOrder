@@ -41,7 +41,6 @@ public class PlayerHealth : MonoBehaviour {
 	
 	void OnCollisionEnter2D (Collision2D collision)
 	{
-		print (collision);
 		if (collision.collider.gameObject.CompareTag ("Enemy")) {
 			health -= 1;
 			if (health < 0) {

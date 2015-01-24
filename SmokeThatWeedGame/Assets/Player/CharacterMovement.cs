@@ -62,6 +62,8 @@ public class CharacterMovement : MonoBehaviour {
 	// Update is called once per frame
 
 	void Update () {
+		colliderMask = ~(1 << (10 + playerNum));
+
 		Physics2D.IgnoreLayerCollision (playerLayer, platformLayer, rigidbody2D.velocity.y > 0);
 
 		pos2D = new Vector2 (trans.position.x, trans.position.y);
