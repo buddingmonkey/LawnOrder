@@ -48,7 +48,6 @@ public class CharacterMovement : MonoBehaviour {
 		width = trans.rect.width;
 		halfHeight = height / 2;
 		halfWidth = width / 2 * 0.95f;
-		Debug.Log (height);
 		state = PlayerState.Falling;
 
 	
