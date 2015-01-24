@@ -11913,9 +11913,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnFrequency: 3
-  spawnDelay: 1
+  spawnFrequency: .100000001
+  spawnDelay: 0
   randomStart: 0
+  direction: 0
 --- !u!4 &1342905277
 Transform:
   m_ObjectHideFlags: 0
@@ -13650,6 +13651,7 @@ MonoBehaviour:
   spawnFrequency: 3
   spawnDelay: 1
   randomStart: 0
+  direction: 0
 --- !u!4 &1579856765
 Transform:
   m_ObjectHideFlags: 0
@@ -14034,6 +14036,7 @@ MonoBehaviour:
   spawnFrequency: 3
   spawnDelay: 1
   randomStart: 0
+  direction: 0
 --- !u!1 &1613456939
 GameObject:
   m_ObjectHideFlags: 0
