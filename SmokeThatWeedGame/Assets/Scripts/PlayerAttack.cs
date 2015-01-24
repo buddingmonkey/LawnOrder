@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class PlayerAttack : MonoBehaviour {
@@ -14,10 +14,38 @@ public class PlayerAttack : MonoBehaviour {
 	public InputControls inputControls;
 	public Shooter shooter;
 
+	Vector2 meleeOffset;
+	public void Start() {
+		meleeOffset = meleeFlash.position - transform.position;
+	}
+
 	public void Melee(InputControls.ControlState state){
 		if (state == InputControls.ControlState.held) return;
 		isMelee = true;
 		meleeTime = 0;
+
+		// get game controller direction or player direction
+		Vector2 d = new Vector2(inputControls.XAxis (), inputControls.YAxis ()).normalized;
+		if (Mathf.Abs(d.y) > Mathf.Abs(d.x) && Mathf.Abs(d.y) > 0.9f) {
+			// up/down
+			if (d.y > 0) {
+				meleeFlash.position = transform.position + new Vector3(meleeOffset.y, meleeOffset.x);
+				meleeFlash.localRotation = Quaternion.AngleAxis(90, Vector3.forward);
+			} else {
+				meleeFlash.position = transform.position - new Vector3(meleeOffset.y, meleeOffset.x);
+				meleeFlash.localRotation = Quaternion.AngleAxis(90, Vector3.forward);
+			}
+		} else if (Mathf.Abs(d.x) > 0) {
+			meleeFlash.localRotation = Quaternion.AngleAxis(0, Vector3.forward);
+			// left/right
+			if (d.x < 0 || d.x == 0 && movement.direction < 0) {
+				meleeFlash.position = transform.position - new Vector3(meleeOffset.x, meleeOffset.y);
+			} else {
+				meleeFlash.position = transform.position + new Vector3(meleeOffset.x, meleeOffset.y);
+			}
+		}
+
+
 		meleeFlash.gameObject.SetActive(true);
 	}
 
