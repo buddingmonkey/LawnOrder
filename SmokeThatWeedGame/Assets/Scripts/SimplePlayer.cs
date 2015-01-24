@@ -28,8 +28,6 @@ public class SimplePlayer : MonoBehaviour {
 			move = -1;
 		}
 
-		Debug.Log(Vector2.right * Time.deltaTime * move * moveMultiplier);
-
 		body.AddForce(Vector2.right * Time.deltaTime * move * moveMultiplier);
 	}
 }
