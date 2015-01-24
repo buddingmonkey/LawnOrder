@@ -4,6 +4,7 @@ using System.Collections;
 public class Shooter : MonoBehaviour {
 	public Transform currentProjectile;
 	public Transform[] projectiles;
+	public InputControls inputControls;
 
 	public bool autoFire = true;
 	public float coolDown = .5f;
@@ -14,10 +15,26 @@ public class Shooter : MonoBehaviour {
 	public void Shoot(InputControls.ControlState state){
 		if (currentProjectile == null || currentCoolDown > 0 || 
 		    (!autoFire && state == InputControls.ControlState.held)) return;
-		Transform b = (Transform)Instantiate (currentProjectile, shootLocation.position, Quaternion.identity);
+
+		var movement = this.gameObject.GetComponent<CharacterMovement> ();
+		Vector3 location = shootLocation.position;
+		Vector3 direction = Vector3.right;
+
+		// get game controller direction or player direction
+		float dx = inputControls.XAxis ();
+		// left/right
+		if (dx < 0 || dx == 0 && movement.direction < 0) {
+			location = transform.position - (location - transform.position);
+			direction = -Vector3.right;
+		}
+
+		Transform b = (Transform)Instantiate (currentProjectile, location, Quaternion.identity);
 		currentCoolDown = coolDown;
 		b.GetComponent<Projectile>().player = this.gameObject;
-		b.GetComponent<AttackHandler>().player = this.gameObject.GetComponent<CharacterMovement>();
+		b.GetComponent<AttackHandler>().player = movement;
+
+		b.GetComponent<Projectile> ().direction = direction;
+
 	}
 	
 	// Update is called once per frame
