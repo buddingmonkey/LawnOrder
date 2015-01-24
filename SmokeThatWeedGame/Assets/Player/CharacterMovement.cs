@@ -11,6 +11,7 @@ public class CharacterMovement : MonoBehaviour {
 
 	public int playerNum;
 
+	public bool holding = false;
 
 	private InputControls input;
 	private RectTransform trans;
@@ -55,6 +56,10 @@ public class CharacterMovement : MonoBehaviour {
 		RaycastHit2D hit = Physics2D.Raycast(pos2D + Vector2.right * halfWidth, -Vector2.up, .05f, colliderMask);
 		if (hit.collider == null) {
 			hit = Physics2D.Raycast(pos2D - Vector2.right * halfWidth, -Vector2.up, .05f, colliderMask);
+			if(hit.collider == null)
+			{//also check the middle with a raycast to see if you're on top of another player?
+				hit = Physics2D.Raycast(pos2D, -Vector2.up, .05f, colliderMask);
+			}
 		}
 		if (hit.collider != null) {
 			state = PlayerState.Grounded;
