@@ -3666,12 +3666,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da4b303faadc45a7aedd09759702d8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdable: 1
+  canBeHeld: 1
   beingHeld: 0
   holder: {fileID: 0}
-  sprayCoolDown: 1
   droppedCoolDown: 1
   dropSpeed: 10
+  sprayCoolDown: 1
 --- !u!224 &315261440
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5500,12 +5500,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da4b303faadc45a7aedd09759702d8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdable: 1
+  canBeHeld: 1
   beingHeld: 0
   holder: {fileID: 0}
-  sprayCoolDown: 1
   droppedCoolDown: 1
   dropSpeed: 10
+  sprayCoolDown: 1
 --- !u!224 &732462665
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8909,12 +8909,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da4b303faadc45a7aedd09759702d8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdable: 1
+  canBeHeld: 1
   beingHeld: 0
   holder: {fileID: 0}
-  sprayCoolDown: 1
   droppedCoolDown: 1
   dropSpeed: 10
+  sprayCoolDown: 1
 --- !u!224 &1461284392
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9626,12 +9626,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da4b303faadc45a7aedd09759702d8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdable: 1
+  canBeHeld: 1
   beingHeld: 0
   holder: {fileID: 0}
-  sprayCoolDown: 1
   droppedCoolDown: 1
   dropSpeed: 10
+  sprayCoolDown: 1
 --- !u!224 &1607002333
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9732,12 +9732,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da4b303faadc45a7aedd09759702d8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdable: 1
+  canBeHeld: 1
   beingHeld: 0
   holder: {fileID: 0}
-  sprayCoolDown: 1
   droppedCoolDown: 1
   dropSpeed: 10
+  sprayCoolDown: 1
 --- !u!224 &1613456944
 RectTransform:
   m_ObjectHideFlags: 0

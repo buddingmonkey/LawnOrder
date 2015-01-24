@@ -1,27 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SprayBottle : MonoBehaviour {
-	public bool holdable = true;
+public class Holdable : MonoBehaviour {
+	public bool canBeHeld = true;
 	public bool beingHeld;
 	public CharacterMovement holder;
-	public float sprayCoolDown = 1f;
 	public float droppedCoolDown = 1f;
 	public float dropSpeed = 10f;
-	private float coolDownTimer;
+	protected float coolDownTimer;
+
 	// Use this for initialization
 	void Start () {
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	protected void BaseUpdate () {
 		if (!beingHeld) {
-			if(holdable)
+			if(canBeHeld)
 			{
 				return;
 			}
-
+			
 			if(coolDownTimer>0)
 			{
 				coolDownTimer-=Time.deltaTime;
@@ -29,41 +29,16 @@ public class SprayBottle : MonoBehaviour {
 			else
 			{
 				collider2D.enabled = true;
-				holdable = true;
+				canBeHeld = true;
 			}
-
+			
 			return;
 		}
-
+		
 		if(coolDownTimer>0f)
 		{
 			coolDownTimer-=Time.deltaTime;
 			return;
-		}
-
-		Vector2 sprayDirection = Vector2.zero;
-		if(Input.GetKey ("w"))
-		{
-			sprayDirection +=Vector2.up;
-		}
-		if(Input.GetKey ("s"))
-		{
-			sprayDirection -=Vector2.up;
-		}
-		if(Input.GetKey ("a"))
-		{
-			sprayDirection +=Vector2.right;
-		}
-		if(Input.GetKey ("d"))
-		{
-			sprayDirection +=Vector2.right;
-		}
-
-		if(sprayDirection != Vector2.zero)
-		{
-			//fire a spray in that direction.
-
-			coolDownTimer = sprayCoolDown;
 		}
 
 		if(Input.GetKeyDown ("x"))
@@ -80,13 +55,13 @@ public class SprayBottle : MonoBehaviour {
 		transform.parent = newHolder.transform;
 		transform.localPosition = Vector3.zero - Vector3.forward;
 		//if (collider != null)
-			collider2D.enabled = false;
+		collider2D.enabled = false;
 		rigidbody2D.isKinematic = true;
 	}
-
+	
 	public void GetDropped()
 	{
-		holdable = false;
+		canBeHeld = false;
 		coolDownTimer = droppedCoolDown;
 		beingHeld = false;
 		holder.holding = false;
@@ -96,7 +71,7 @@ public class SprayBottle : MonoBehaviour {
 		rigidbody2D.isKinematic = false;
 		//collider2D.enabled = true;
 	}
-
+	
 	void OnCollisionEnter2D(Collision2D coll) {
 		if(beingHeld)
 		{
