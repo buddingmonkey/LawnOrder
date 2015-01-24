@@ -46,7 +46,7 @@ public class InputControls : MonoBehaviour {
 	public bool Attack(){
 		if (this.device == null){
 			if (player.playerNum != 0 )return false;
-			return Input.GetButtonDown ("Attack"); 
+			return Input.GetButtonDown ("Fire1"); 
 		}
 
 		InputControl ctrl = device.GetControl (InputControlType.Action2);
