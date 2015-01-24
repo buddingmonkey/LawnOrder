@@ -8,12 +8,13 @@ public class InputControls : MonoBehaviour {
 
 	void Start(){
 		if (InputManager.Devices != null && InputManager.Devices.Count > player.playerNum){
+			Debug.Log ("Device Set!");
 			device = InputManager.Devices[player.playerNum];
 		}
 	}
 
 	public bool Jumping() {
-		if (device == null ){
+		if (this.device == null){
 			if (player.playerNum != 0 )return false;
 			return Input.GetButton ("Jump");
 		}
@@ -22,8 +23,8 @@ public class InputControls : MonoBehaviour {
 	}
 
 	public float XAxis() {
-		if (device == null ){
-			if (player.playerNum != 0 )return 0;
+		if (this.device == null){
+			if (player.playerNum != 0 ) return 0;
 			return Input.GetAxis ("Horizontal");
 		}
 		
