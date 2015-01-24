@@ -3,11 +3,13 @@ using System.Collections;
 using InControl;
 
 public class InputControls : MonoBehaviour {
-	public SimplePlayer player;
+	public CharacterMovement player;
 	InputDevice device;
 
 	void Start(){
-		device = InputManager.Devices[player.playerNum];
+		if (InputManager.Devices.Count > player.playerNum){
+			device = InputManager.Devices[player.playerNum];
+		}
 	}
 
 	public bool Jumping() {
@@ -16,6 +18,11 @@ public class InputControls : MonoBehaviour {
 	}
 
 	public float XAxis() {
-		return Mathf.Max(device.LeftStickX, device.DPadX);
+		if (device == null ) return 0;
+		if (Mathf.Abs(device.LeftStickX) > Mathf.Abs(device.DPadX)){
+			return device.LeftStickX;
+		} else {
+			return device.DPadX;
+		}
 	}
 }
