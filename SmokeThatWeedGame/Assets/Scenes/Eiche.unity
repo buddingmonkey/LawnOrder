@@ -8943,7 +8943,7 @@ MonoBehaviour:
   - {fileID: 1255205842}
   - {fileID: 396036463}
   - {fileID: 563323957}
-  playerPrefab: {fileID: 430300, guid: bbde8dacdbe1242e68237abbe8c63c9e, type: 2}
+  playerPrefab: {fileID: 22418602, guid: 7e6c59a726f614ac99dcd592f8586521, type: 2}
 --- !u!4 &1605330224
 Transform:
   m_ObjectHideFlags: 0

@@ -67,7 +67,7 @@ public class GameController : MonoBehaviour {
 	public void SpawnPlayer(int playerNum){
 		Transform player = (Transform) Instantiate(playerPrefab);
 		player.position = spawners[playerNum].position;
-		player.GetComponent<SimplePlayer>().playerNum = playerNum;
+		player.GetComponent<CharacterMovement>().playerNum = playerNum;
 		currentPlayers[playerNum] = player;
 		player.name = "Player" + playerNum;
 		player.parent = spawners[playerNum];

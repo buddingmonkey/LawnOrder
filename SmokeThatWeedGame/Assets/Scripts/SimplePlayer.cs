@@ -18,16 +18,16 @@ public class SimplePlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		var inputDevice = InputManager.Devices[0];//(InputManager.Devices.Count > playerNum) ? InputManager.Devices[playerNum] : null;
-
-		float move = 0;
-
-		if (Input.GetKey(KeyCode.RightArrow)){
-			move = 1;
-		} else if (Input.GetKey(KeyCode.LeftArrow)){
-			move = -1;
-		}
-
-		body.AddForce(Vector2.right * Time.deltaTime * move * moveMultiplier);
+//		var inputDevice = InputManager.Devices[0];//(InputManager.Devices.Count > playerNum) ? InputManager.Devices[playerNum] : null;
+//
+//		float move = 0;
+//
+//		if (Input.GetKey(KeyCode.RightArrow)){
+//			move = 1;
+//		} else if (Input.GetKey(KeyCode.LeftArrow)){
+//			move = -1;
+//		}
+//
+//		body.AddForce(Vector2.right * Time.deltaTime * move * moveMultiplier);
 	}
 }
