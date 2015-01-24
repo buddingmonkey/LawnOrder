@@ -28,7 +28,7 @@ public class Holdable : MonoBehaviour {
 			}
 			else
 			{
-				collider2D.enabled = true;
+				//collider2D.enabled = true;
 				canBeHeld = true;
 			}
 			
@@ -40,17 +40,13 @@ public class Holdable : MonoBehaviour {
 			coolDownTimer-=Time.deltaTime;
 			return;
 		}
-
-		if(Input.GetKeyDown ("x"))
-		{
-			GetDropped ();
-		}
 	}
 
 	public virtual void GetHeld(CharacterMovement newHolder)
 	{
 		var attack = newHolder.GetComponent<PlayerAttack>();
-		attack.isHolding = true;
+		if (attack.holdItem != null) return;
+		attack.holdItem = this;
 		beingHeld = true;
 		holder = newHolder;
 		transform.parent = newHolder.transform;
@@ -60,29 +56,30 @@ public class Holdable : MonoBehaviour {
 		rigidbody2D.isKinematic = true;
 	}
 	
-	public virtual void GetDropped()
+	public virtual void GetDropped(Vector2 impulse)
 	{
 		var attack = holder.GetComponent<PlayerAttack>();
 		canBeHeld = false;
 		coolDownTimer = droppedCoolDown;
 		beingHeld = false;
-		attack.isHolding = false;
+		attack.holdItem = null;
 		holder = null;
 		transform.parent = null;
-		rigidbody2D.velocity = Vector2.up*dropSpeed;
+		rigidbody2D.velocity = impulse * dropSpeed;
 		rigidbody2D.isKinematic = false;
+		collider2D.enabled = true;
 		//collider2D.enabled = true;
 	}
 	
 	void OnCollisionEnter2D(Collision2D coll) {
-		if(beingHeld)
+		if(beingHeld || coolDownTimer>0)
 		{
 			return;
 		}
 		CharacterMovement theCharacter = coll.gameObject.GetComponent<CharacterMovement> ();
 		if (theCharacter != null)
 		{
-			if(!theCharacter.GetComponent<PlayerAttack>().isHolding)
+			if(!theCharacter.GetComponent<PlayerAttack>().holdItem != null)
 			{
 				Debug.Log ("grabbed by "+theCharacter.gameObject.name);
 				GetHeld (theCharacter);
