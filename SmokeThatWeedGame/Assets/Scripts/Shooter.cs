@@ -24,7 +24,7 @@ public class Shooter : MonoBehaviour {
 		float dx = inputControls.XAxis ();
 		// left/right
 		if (dx < 0 || dx == 0 && movement.direction < 0) {
-			location = transform.position - (location - transform.position);
+			location.x = transform.position.x - (location.x - transform.position.x);
 			direction = -Vector3.right;
 		}
 

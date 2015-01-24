@@ -22,13 +22,13 @@ public class Holdable : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	protected void BaseUpdate () {
+	protected void Update () {
 		if (!beingHeld) {
 			if(canBeHeld)
 			{
 				return;
 			}
-			
+			print (coolDownTimer);
 			if(coolDownTimer>0)//cool down pickup time when not being held
 			{
 				coolDownTimer-=Time.deltaTime;
