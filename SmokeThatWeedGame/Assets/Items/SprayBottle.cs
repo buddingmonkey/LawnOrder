@@ -31,7 +31,7 @@ public class SprayBottle : Holdable {
 			sprayDirection +=Vector2.right;
 		}
 
-		if(sprayDirection != Vector2.zero)
+		if(sprayDirection != Vector2.zero && coolDownTimer<=0)
 		{
 			//fire a spray in that direction.
 

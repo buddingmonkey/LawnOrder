@@ -90,7 +90,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11415140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,7 +130,11 @@ MonoBehaviour:
   jumpSpeed: 15
   maxAcceleration: .899999976
   maxJumpDuration: .25
+  strikeCoolDown: .400000006
+  strikeRange: 1
   playerNum: 0
+  holding: 0
+  meleeFlash: {fileID: 100000, guid: 75907a9cdf5c34774be6b93d323a915a, type: 2}
 --- !u!114 &11418602
 MonoBehaviour:
   m_ObjectHideFlags: 1

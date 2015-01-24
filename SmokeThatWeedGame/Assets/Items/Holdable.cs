@@ -22,7 +22,7 @@ public class Holdable : MonoBehaviour {
 				return;
 			}
 			
-			if(coolDownTimer>0)
+			if(coolDownTimer>0)//cool down pickup time when not being held
 			{
 				coolDownTimer-=Time.deltaTime;
 			}
@@ -35,7 +35,7 @@ public class Holdable : MonoBehaviour {
 			return;
 		}
 		
-		if(coolDownTimer>0f)
+		if(coolDownTimer>0f)//cool down action time when being held
 		{
 			coolDownTimer-=Time.deltaTime;
 			return;

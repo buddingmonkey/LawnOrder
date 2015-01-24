@@ -8,10 +8,13 @@ public class CharacterMovement : MonoBehaviour {
 	public float jumpSpeed;
 	public float maxAcceleration;
 	public float maxJumpDuration;
-
+	public float strikeCoolDown = 1f;
+	public float strikeRange = 1f;
 	public int playerNum;
 
 	public bool holding = false;
+
+	public GameObject meleeFlash;
 
 	private InputControls input;
 	private RectTransform trans;
@@ -20,6 +23,8 @@ public class CharacterMovement : MonoBehaviour {
 	private float width;
 	private float halfWidth;
 	private float jumpTime;
+	private float strikeTime;
+	private Vector2 pos2D;
 
 	int colliderMask = ~0x100;
 	new Rigidbody2D rigidbody;
@@ -45,9 +50,14 @@ public class CharacterMovement : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+
 	void Update () {
 
-		Vector2 pos2D = new Vector2 (trans.position.x, trans.position.y - halfHeight);
+		pos2D = new Vector2 (trans.position.x, trans.position.y);
+
+		MeleeInput ();
+
+		pos2D = new Vector2 (trans.position.x, trans.position.y - halfHeight);
 
 		if (state == PlayerState.Grounded)
 			state = PlayerState.Falling;
@@ -86,6 +96,47 @@ public class CharacterMovement : MonoBehaviour {
 		ApplyMovement ();
 
 		ApplyGravity ();
+	}
+
+	private void MeleeInput()
+	{
+		if(holding)
+		{
+			return;
+		}
+
+		if(strikeTime>0)
+		{
+			strikeTime -=Time.deltaTime;
+			return;
+		}
+
+		Vector2 strikeDirection = Vector2.zero;
+		if(Input.GetKeyDown ("w"))
+		{
+			strikeDirection +=Vector2.up;
+		}
+		if(Input.GetKeyDown ("s"))
+		{
+			strikeDirection -=Vector2.up;
+		}
+		if(Input.GetKeyDown ("a"))
+		{
+			strikeDirection +=Vector2.right;
+		}
+		if(Input.GetKeyDown ("d"))
+		{
+			strikeDirection +=Vector2.right;
+		}
+		
+		if(strikeDirection != Vector2.zero)
+		{
+			//strike in that direction.
+			RectTransform flash = (Instantiate (meleeFlash) as GameObject).GetComponent<RectTransform>();
+		
+			flash.position = pos2D+(strikeDirection * strikeRange);
+			strikeTime = strikeCoolDown;
+		}
 	}
 
 	void ApplyGravity() {
