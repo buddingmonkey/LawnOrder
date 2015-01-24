@@ -14,8 +14,8 @@ public class SprayBottle : Holdable {
 		this.rigidbody2D.isKinematic = true;
 	}
 
-	public override void GetDropped(){
-		base.GetDropped();
+	public override void GetDropped(Vector2 impulse){
+		base.GetDropped(impulse);
 		this.rigidbody2D.isKinematic = false;
 	}
 	
