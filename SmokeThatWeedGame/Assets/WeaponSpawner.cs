@@ -85,7 +85,6 @@ public class WeaponSpawner : MonoBehaviour {
 					{
 						//instantiate new ticktock
 						float angle = Mathf.Deg2Rad * (90 + (- 360f * ticksTocked/(tickTockCount)));
-						Debug.Log(angle);
 
 						tickTocks[ticksTocked] = Instantiate (tickTockPrefab)as GameObject;
 						tickTocks[ticksTocked].transform.parent = transform;

@@ -9,6 +9,7 @@ public class Holdable : MonoBehaviour {
 	public float dropSpeed = 10f;
 	protected float coolDownTimer;
 	protected WeaponSpawner mySpawner;
+	public int bulletID = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -28,7 +29,7 @@ public class Holdable : MonoBehaviour {
 			{
 				return;
 			}
-			print (coolDownTimer);
+
 			if(coolDownTimer>0)//cool down pickup time when not being held
 			{
 				coolDownTimer-=Time.deltaTime;
@@ -54,6 +55,7 @@ public class Holdable : MonoBehaviour {
 		if(mySpawner != null)
 		{
 			mySpawner.GetGrabbed();
+			mySpawner = null;
 		}
 		var attack = newHolder.GetComponent<PlayerAttack>();
 		if (attack.holdItem != null) return;

@@ -1,82 +1,99 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &154046
+--- !u!1 &141872
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 454046}
-  - 212: {fileID: 21254046}
-  - 114: {fileID: 11493798}
-  - 61: {fileID: 6141116}
-  - 114: {fileID: 11415026}
+  - 4: {fileID: 441872}
+  - 212: {fileID: 21241872}
+  - 114: {fileID: 11441870}
+  - 61: {fileID: 6141872}
+  - 114: {fileID: 11441872}
+  - 95: {fileID: 9503580}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &454046
+--- !u!4 &441872
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154046}
+  m_GameObject: {fileID: 141872}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.40639067, y: 3.46280313, z: 0}
+  m_LocalPosition: {x: -21.6000004, y: -13.8999996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &6141116
+--- !u!61 &6141872
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154046}
+  m_GameObject: {fileID: 141872}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 1, y: .532243252}
-  m_Center: {x: 0, y: .233878136}
---- !u!114 &11415026
-MonoBehaviour:
+  m_Size: {x: .614788294, y: .669819117}
+  m_Center: {x: -.00687932968, y: -.0137574673}
+--- !u!95 &9503580
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154046}
+  m_GameObject: {fileID: 141872}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7044199f14f445f6addd0027970a084, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  player: {fileID: 0}
-  stopAfterHit: 1
---- !u!114 &11493798
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8173c2255ce8a4ce5be42c27ee0c6c02, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11441870
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154046}
+  m_GameObject: {fileID: 141872}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: addde3ed0619c48f1b27fe8b57eb7553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: 0
-  speed: 15
+  path: 3
+  speed: 20
   direction: {x: 1, y: 0}
   player: {fileID: 0}
---- !u!212 &21254046
+  lifeTime: .25
+--- !u!114 &11441872
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7044199f14f445f6addd0027970a084, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: .100000001
+  player: {fileID: 0}
+  stopAfterHit: 1
+--- !u!212 &21241872
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154046}
+  m_GameObject: {fileID: 141872}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -91,7 +108,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300198, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e9a2d6e7c266334b83bf5b50a48969a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -102,6 +119,6 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 154046}
+  m_RootGameObject: {fileID: 141872}
   m_IsPrefabParent: 1
   m_IsExploded: 1
