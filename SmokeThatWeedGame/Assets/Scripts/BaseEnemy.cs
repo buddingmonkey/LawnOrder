@@ -27,7 +27,7 @@ public class BaseEnemy : MonoBehaviour {
 	float halfWidth;
 	float height;
 	float halfHeight;
-
+	float timeSinceDamaged = 0;
 	
 	// Use this for initialization
 	void Start () {
@@ -53,8 +53,9 @@ public class BaseEnemy : MonoBehaviour {
 			timeInStage = 0;
 			spriteRenderer.sprite = stages[stage];
 		}
+		timeSinceDamaged += Time.deltaTime;
 
-		if (stage >= movementStage) {
+		if (stage >= movementStage && timeSinceDamaged > 1f) {
 			Move ();
 		}
 
@@ -71,7 +72,8 @@ public class BaseEnemy : MonoBehaviour {
 	}
 
 	public void TakeDamage(float damage, Vector2 damageDirection, int player) {
-		rigidbody.AddForce (Vector2.up * 10 + damageDirection * 10 * damage, ForceMode2D.Impulse);//(damageDirection * damage * 10 + Vector2.up, ForceMode2D.Impulse);
+		timeSinceDamaged = 0;
+		rigidbody.AddForce (Vector2.up*3 + damageDirection * 5, ForceMode2D.Impulse);
 		health -= damage;
 		if (health < 0) {
 			Die(player);

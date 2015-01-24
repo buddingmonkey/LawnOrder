@@ -26,7 +26,7 @@ public class SprayBottle : Holdable {
 	
 	// Update is called once per frame
 	void Update () {
-		base.BaseUpdate ();
+		base.Update ();
 
 		Vector2 sprayDirection = Vector2.zero;
 		if(Input.GetKey ("w"))
