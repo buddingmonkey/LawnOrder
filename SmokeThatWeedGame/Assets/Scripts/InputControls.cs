@@ -3,16 +3,19 @@ using System.Collections;
 using InControl;
 
 public class InputControls : MonoBehaviour {
-
+	public SimplePlayer player;
+	InputDevice device;
 
 	void Start(){
+		device = InputManager.Devices[player.playerNum];
 	}
 
 	public bool Jumping() {
-		return Input.GetButton ("Action1");
+		if (device == null ) return false;
+		return device.GetControl( InputControlType.Action1);
 	}
 
 	public float XAxis() {
-		return Input.GetAxis ("Horizontal");
+		return Mathf.Max(device.LeftStickX, device.DPadX);
 	}
 }
