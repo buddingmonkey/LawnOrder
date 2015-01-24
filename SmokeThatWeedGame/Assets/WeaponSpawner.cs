@@ -35,7 +35,6 @@ public class WeaponSpawner : MonoBehaviour {
 	void Update () {
 		if(!grabbed)
 		{
-			Debug.Log("Wait for it to get grabbed "+Time.time);
 			return;
 		}
 		//Debug.Log ("tick tock");
@@ -84,12 +83,13 @@ public class WeaponSpawner : MonoBehaviour {
 				{
 					if(tickTocks[ticksTocked]==null)
 					{
-						//Debug.Log ("INSTANTIATE TICK TOCK "+Time.time);
 						//instantiate new ticktock
-						float angle = 360f * ticksTocked/(tickTockCount);
+						float angle = Mathf.Deg2Rad * (90 + (- 360f * ticksTocked/(tickTockCount)));
+						Debug.Log(angle);
+
 						tickTocks[ticksTocked] = Instantiate (tickTockPrefab)as GameObject;
-						tickTocks[ticksTocked].transform.position = transform.position + (Vector3.up*Mathf.Cos(angle)) + (Vector3.right*Mathf.Sin(angle));
 						tickTocks[ticksTocked].transform.parent = transform;
+						tickTocks[ticksTocked].transform.localPosition = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
 					}
 					else
 					{
