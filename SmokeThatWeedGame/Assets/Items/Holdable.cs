@@ -60,7 +60,7 @@ public class Holdable : MonoBehaviour {
 		attack.holdItem = this;
 		beingHeld = true;
 		holder = newHolder;
-		transform.parent = newHolder.transform;
+		transform.SetParent(newHolder.transform);
 		transform.localPosition = Vector3.zero - Vector3.forward;
 		//if (collider != null)
 		collider2D.enabled = false;

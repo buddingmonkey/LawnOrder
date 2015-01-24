@@ -69,7 +69,7 @@ MonoBehaviour:
       OrderInLayer: 0
       Tag: Untagged
     - Sprite: {fileID: 21300012, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
-      Collision: 2
+      Collision: 0
       PhysicsMaterial: {fileID: 0}
       IsTrigger: 0
       Rotation: 0
@@ -78,7 +78,7 @@ MonoBehaviour:
       OrderInLayer: 0
       Tag: Untagged
     - Sprite: {fileID: 21300014, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
-      Collision: 2
+      Collision: 0
       PhysicsMaterial: {fileID: 0}
       IsTrigger: 0
       Rotation: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
       Collision: 0
       PhysicsMaterial: {fileID: 0}
       IsTrigger: 0
-      Rotation: 0
+      Rotation: 270
       FlipHorizontally: 0
       FlipVertically: 0
       OrderInLayer: 0
@@ -1089,7 +1089,7 @@ MonoBehaviour:
       Collision: 1
       PhysicsMaterial: {fileID: 0}
       IsTrigger: 0
-      Rotation: 0
+      Rotation: 270
       FlipHorizontally: 0
       FlipVertically: 0
       OrderInLayer: 0
@@ -1125,7 +1125,7 @@ MonoBehaviour:
       Collision: 2
       PhysicsMaterial: {fileID: 0}
       IsTrigger: 0
-      Rotation: 0
+      Rotation: 270
       FlipHorizontally: 0
       FlipVertically: 0
       OrderInLayer: 0
@@ -1323,11 +1323,11 @@ MonoBehaviour:
       Collision: 0
       PhysicsMaterial: {fileID: 0}
       IsTrigger: 0
-      Rotation: 0
+      Rotation: 270
       FlipHorizontally: 0
       FlipVertically: 0
       OrderInLayer: 0
-      Tag: 
+      Tag: Untagged
     - Sprite: {fileID: 21300292, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
       Collision: 1
       PhysicsMaterial: {fileID: 0}
@@ -1368,7 +1368,7 @@ MonoBehaviour:
       Collision: 2
       PhysicsMaterial: {fileID: 0}
       IsTrigger: 0
-      Rotation: 0
+      Rotation: 270
       FlipHorizontally: 0
       FlipVertically: 0
       OrderInLayer: 0
@@ -3741,7 +3741,7 @@ MonoBehaviour:
       OrderInLayer: 0
       Tag: Untagged
     - Sprite: {fileID: 21300828, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
-      Collision: 0
+      Collision: 2
       PhysicsMaterial: {fileID: 0}
       IsTrigger: 0
       Rotation: 0

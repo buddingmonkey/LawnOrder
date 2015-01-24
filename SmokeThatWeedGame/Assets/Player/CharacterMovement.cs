@@ -11,6 +11,7 @@ public class CharacterMovement : MonoBehaviour {
 	public float strikeCoolDown = 1f;
 	public float strikeRange = 1f;
 	public int playerNum;
+	public int direction = 1;
 	private InputControls input;
 	private RectTransform trans;
 	private float height;
@@ -120,6 +121,11 @@ public class CharacterMovement : MonoBehaviour {
 		Vector2 v = rigidbody.velocity;
 		float vx = dir * maxSpeed;
 		rigidbody.velocity = Vector2.Lerp(v, new Vector2(vx, v.y), maxAcceleration);
+		if (rigidbody.velocity.x < 0) {
+			direction = -1;
+		} else if (rigidbody.velocity.x > 0) {
+			direction = 1;
+		}
 	}
 
 }

@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	public static GameState state;
-	public static ulong[] score = new ulong[4];
+	public static int[] score = new int[4];
 
 	public static int round;
 

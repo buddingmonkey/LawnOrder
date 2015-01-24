@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class ScoreUpdater : MonoBehaviour {
 
 	public int slot;
-	ulong previousScore;
+	int previousScore;
 
 	Text uiText;
 
@@ -16,7 +16,7 @@ public class ScoreUpdater : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		ulong score = GameController.score [slot];
+		int score = GameController.score [slot];
 		if (score != previousScore) {
 			previousScore = score;
 			uiText.text = "P" + (slot+1).ToString() + score.ToString(" 00000000");
