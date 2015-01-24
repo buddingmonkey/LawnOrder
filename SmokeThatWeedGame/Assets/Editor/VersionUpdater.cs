@@ -28,14 +28,7 @@ namespace InControl
 
 		static void UpdateVersion()
 		{
-			string versionPath = "Assets/InControl/Source/VersionInfo.cs";
-			string versionText = GetFileContents( versionPath );
-			if (versionText != null)
-			{
-				versionText = Regex.Replace( versionText, @"Build = (?<value>\d+)", ReplaceFunc );
-				PutFileContents( versionPath, versionText );				
-				AssetDatabase.Refresh();
-			}
+			return;
 		}
 
 
