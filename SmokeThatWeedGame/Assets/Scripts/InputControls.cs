@@ -13,12 +13,20 @@ public class InputControls : MonoBehaviour {
 	}
 
 	public bool Jumping() {
-		if (device == null ) return false;
+		if (device == null ){
+			if (player.playerNum != 0 )return false;
+			return Input.GetButton ("Jump");
+		}
+		
 		return device.GetControl( InputControlType.Action1);
 	}
 
 	public float XAxis() {
-		if (device == null ) return 0;
+		if (device == null ){
+			if (player.playerNum != 0 )return 0;
+			return Input.GetAxis ("Horizontal");
+		}
+		
 		if (Mathf.Abs(device.LeftStickX) > Mathf.Abs(device.DPadX)){
 			return device.LeftStickX;
 		} else {
