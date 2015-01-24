@@ -15,7 +15,7 @@ GameObject:
   - 95: {fileID: 9503580}
   m_Layer: 0
   m_Name: Flame
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,6 +72,7 @@ MonoBehaviour:
   path: 3
   speed: 20
   direction: {x: 1, y: 0}
+  velocity: {x: 0, y: 0}
   player: {fileID: 0}
   lifeTime: .25
 --- !u!114 &11441872

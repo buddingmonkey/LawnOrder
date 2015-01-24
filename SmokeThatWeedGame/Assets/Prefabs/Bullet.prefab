@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11415026}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,7 +70,9 @@ MonoBehaviour:
   path: 0
   speed: 15
   direction: {x: 1, y: 0}
+  velocity: {x: 0, y: 0}
   player: {fileID: 0}
+  lifeTime: 10
 --- !u!212 &21254046
 SpriteRenderer:
   m_ObjectHideFlags: 1
