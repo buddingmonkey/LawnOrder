@@ -12,9 +12,9 @@ GameObject:
   - 50: {fileID: 5069986}
   - 212: {fileID: 21269986}
   - 58: {fileID: 5849526}
-  m_Layer: 10
+  m_Layer: 15
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

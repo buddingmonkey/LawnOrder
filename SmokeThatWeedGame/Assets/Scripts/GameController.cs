@@ -25,6 +25,7 @@ public class GameController : MonoBehaviour {
 
 	public static int players = 4;
 
+	public GameObject enemyPrefab;
 	public Transform[] spawners;
 
 	public Transform playerPrefab;
@@ -42,6 +43,12 @@ public class GameController : MonoBehaviour {
 
 		for (int i = 0; i < GameController.players; i++){
 			SpawnPlayer(i);	
+		}
+
+		foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Enemy Spawn")) {
+			if (obj.GetComponent<EnemySpawner>() == null) {
+				obj.AddComponent<EnemySpawner>();
+			}
 		}
 	}
 	

@@ -40,6 +40,7 @@ public class BaseEnemy : MonoBehaviour {
 		halfWidth = transform.rect.width / 2;
 		height = transform.rect.width;
 		halfHeight = transform.rect.width / 2;
+		speed *= Random.Range (0.9f, 1.1f);
 	}
 	
 	// Update is called once per frame

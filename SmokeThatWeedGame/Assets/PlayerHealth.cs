@@ -41,17 +41,19 @@ public class PlayerHealth : MonoBehaviour {
 	
 	void OnCollisionEnter2D (Collision2D collision)
 	{
-		if (collision.collider.gameObject.CompareTag ("Enemy")) {
-			health -= 1;
-			if (health < 0) {
-				// TODO a cool animation or effect
-				int pNum = GetComponent<CharacterMovement>().playerNum;
-				Destroy (gameObject);
-				GameController.Instance.SpawnPlayer(pNum);
-			} else {
-				timeHurt = 0;
-				flashTime = 0;
-				renderer.enabled = false;
+		if (timeHurt > 1) {
+			if (collision.collider.gameObject.CompareTag ("Enemy")) {
+				health -= 1;
+				if (health < 0) {
+					// TODO a cool animation or effect
+					int pNum = GetComponent<CharacterMovement>().playerNum;
+					Destroy (gameObject);
+					GameController.Instance.SpawnPlayer(pNum);
+				} else {
+					timeHurt = 0;
+					flashTime = 0;
+					renderer.enabled = false;
+				}
 			}
 		}
 	}
