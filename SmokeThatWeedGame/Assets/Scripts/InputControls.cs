@@ -7,7 +7,7 @@ public class InputControls : MonoBehaviour {
 	InputDevice device;
 
 	void Start(){
-		if (InputManager.Devices.Count > player.playerNum){
+		if (InputManager.Devices != null && InputManager.Devices.Count > player.playerNum){
 			device = InputManager.Devices[player.playerNum];
 		}
 	}
