@@ -1,11 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Editor\VersionUpdater.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PlayerHealth.cs">
     <Files>
-      <File FileName="Assets\Scripts\InputControls.cs" Line="10" Column="30" />
-      <File FileName="Assets\InControl\Source\InputManager.cs" Line="15" Column="1" />
-      <File FileName="Assets\InControl\Source\VersionInfo.cs" Line="38" Column="11" />
-      <File FileName="Assets\Editor\VersionUpdater.cs" Line="51" Column="1" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="70" Column="40" />
+      <File FileName="Assets/Scripts/UI/ScoreUpdater.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BaseEnemy.cs" Line="1" Column="1" />
+      <File FileName="Assets/Player/CharacterMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/InputControls.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SimplePlayer.cs" Line="7" Column="1" />
+      <File FileName="Assets/PlayerHealth.cs" Line="10" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
