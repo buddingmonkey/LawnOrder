@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11415026}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.01000023, y: 3.48000002, z: 0}
+  m_LocalPosition: {x: 6.40639067, y: 3.46280313, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -40,8 +40,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 1, y: 1}
-  m_Center: {x: 0, y: 0}
+  m_Size: {x: 1, y: .532243252}
+  m_Center: {x: 0, y: .233878136}
 --- !u!114 &11415026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -54,6 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  player: {fileID: 0}
   stopAfterHit: 1
 --- !u!114 &11493798
 MonoBehaviour:
@@ -69,7 +70,9 @@ MonoBehaviour:
   path: 0
   speed: 15
   direction: {x: 1, y: 0}
+  velocity: {x: 0, y: 0}
   player: {fileID: 0}
+  lifeTime: 10
 --- !u!212 &21254046
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -11,7 +11,10 @@ public class AttackHandler : MonoBehaviour {
 		if (collider.tag.Equals("Enemy")) {
 			var enemy = collider.GetComponentInParent<BaseEnemy>();
 			Vector2 dir = new Vector2((collider.transform.position - transform.position).x > 0 ? 1 : -1, 0);
-			enemy.TakeDamage(damage, dir, player.playerNum);
+
+			if (this.tag == "Projectile" && this.name != GameController.activeProjectile){
+				enemy.TakeDamage(damage, dir, player.playerNum);
+			}
 
 			if (stopAfterHit) {
 				Destroy (gameObject);

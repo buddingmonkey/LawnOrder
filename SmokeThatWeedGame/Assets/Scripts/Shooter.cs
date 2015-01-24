@@ -30,10 +30,12 @@ public class Shooter : MonoBehaviour {
 
 		Transform b = (Transform)Instantiate (currentProjectile, location, Quaternion.identity);
 		currentCoolDown = coolDown;
-		b.GetComponent<Projectile>().player = this.gameObject;
+		var p = b.GetComponent<Projectile>();
+		p.player = this.gameObject;
 		b.GetComponent<AttackHandler>().player = movement;
 
-		b.GetComponent<Projectile> ().direction = direction;
+		p.direction = direction;
+		p.velocity = movement.rigidbody2D.velocity;
 
 	}
 	
