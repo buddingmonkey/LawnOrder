@@ -4817,9 +4817,9 @@ GameObject:
   - 212: {fileID: 315261438}
   - 58: {fileID: 315261437}
   - 50: {fileID: 315261436}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: SprayBottle
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4831,11 +4831,11 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 1835275639}
   m_GameObject: {fileID: 315261435}
-  m_Mass: 9.99999975e-05
-  m_LinearDrag: 0
+  m_Mass: 3
+  m_LinearDrag: .5
   m_AngularDrag: .0500000007
   m_GravityScale: 1.5
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -9262,9 +9262,9 @@ GameObject:
   - 212: {fileID: 841127450}
   - 58: {fileID: 841127449}
   - 50: {fileID: 841127448}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: SprayBottle
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9276,11 +9276,11 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 288472197}
   m_GameObject: {fileID: 841127447}
-  m_Mass: 9.99999975e-05
-  m_LinearDrag: 0
+  m_Mass: 3
+  m_LinearDrag: .5
   m_AngularDrag: .0500000007
   m_GravityScale: 1.5
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -11006,6 +11006,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1118938427}
+  - 114: {fileID: 1118938428}
   m_Layer: 0
   m_Name: EnemySpawn
   m_TagString: Enemy Spawn
@@ -11025,6 +11026,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
+--- !u!114 &1118938428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1118938426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnFrequency: 1
+  spawnDelay: 1
+  randomStart: 0
 --- !u!1 &1122028591
 GameObject:
   m_ObjectHideFlags: 0
@@ -14646,6 +14661,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1634081052}
+  - 114: {fileID: 1634081053}
   m_Layer: 0
   m_Name: EnemySpawn
   m_TagString: Enemy Spawn
@@ -14665,6 +14681,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+--- !u!114 &1634081053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1634081051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnFrequency: 1
+  spawnDelay: 1
+  randomStart: 0
 --- !u!1 &1637036322
 GameObject:
   m_ObjectHideFlags: 0
@@ -18277,9 +18307,9 @@ GameObject:
   - 212: {fileID: 2077395900}
   - 58: {fileID: 2077395899}
   - 50: {fileID: 2077395898}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: SprayBottle
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18291,11 +18321,11 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 285336718}
   m_GameObject: {fileID: 2077395897}
-  m_Mass: 9.99999975e-05
-  m_LinearDrag: 0
+  m_Mass: 3
+  m_LinearDrag: .5
   m_AngularDrag: .0500000007
   m_GravityScale: 1.5
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1

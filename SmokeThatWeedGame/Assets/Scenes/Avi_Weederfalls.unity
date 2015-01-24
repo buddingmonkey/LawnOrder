@@ -1277,6 +1277,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 123756937}
+  - 114: {fileID: 123756938}
   m_Layer: 0
   m_Name: EnemySpawn
   m_TagString: Enemy Spawn
@@ -1296,6 +1297,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
+--- !u!114 &123756938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 123756936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnFrequency: .5
+  spawnDelay: 1
+  randomStart: 1
 --- !u!1 &124800863
 GameObject:
   m_ObjectHideFlags: 0
@@ -3617,6 +3632,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 307888545}
+  - 114: {fileID: 307888546}
   m_Layer: 0
   m_Name: EnemySpawn
   m_TagString: Enemy Spawn
@@ -3636,6 +3652,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
+--- !u!114 &307888546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 307888544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnFrequency: .5
+  spawnDelay: 1
+  randomStart: 1
 --- !u!1 &315261435
 GameObject:
   m_ObjectHideFlags: 0
@@ -3648,9 +3678,9 @@ GameObject:
   - 212: {fileID: 315261438}
   - 58: {fileID: 315261437}
   - 50: {fileID: 315261436}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: SprayBottle
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3662,11 +3692,11 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 1835275639}
   m_GameObject: {fileID: 315261435}
-  m_Mass: 9.99999975e-05
-  m_LinearDrag: 0
+  m_Mass: 3
+  m_LinearDrag: .5
   m_AngularDrag: .0500000007
   m_GravityScale: 1.5
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -3750,6 +3780,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 315385658}
+  - 114: {fileID: 315385659}
   m_Layer: 0
   m_Name: EnemySpawn
   m_TagString: Enemy Spawn
@@ -3769,6 +3800,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
+--- !u!114 &315385659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 315385657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnFrequency: .5
+  spawnDelay: 1
+  randomStart: 1
 --- !u!1 &335516166
 GameObject:
   m_ObjectHideFlags: 0
@@ -4972,6 +5017,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 623585760}
+  - 114: {fileID: 623585761}
   m_Layer: 0
   m_Name: EnemySpawn
   m_TagString: Enemy Spawn
@@ -4991,6 +5037,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 19
+--- !u!114 &623585761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 623585759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnFrequency: .5
+  spawnDelay: 1
+  randomStart: 1
 --- !u!1 &655794882
 GameObject:
   m_ObjectHideFlags: 0
@@ -4999,6 +5059,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 655794883}
+  - 114: {fileID: 655794884}
   m_Layer: 0
   m_Name: EnemySpawn
   m_TagString: Enemy Spawn
@@ -5018,6 +5079,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
+--- !u!114 &655794884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 655794882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnFrequency: .5
+  spawnDelay: 1
+  randomStart: 1
 --- !u!1 &658846740
 GameObject:
   m_ObjectHideFlags: 0
@@ -5567,9 +5642,9 @@ GameObject:
   - 212: {fileID: 732462663}
   - 58: {fileID: 732462662}
   - 50: {fileID: 732462661}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: SprayBottle
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5581,11 +5656,11 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 11107366}
   m_GameObject: {fileID: 732462660}
-  m_Mass: 9.99999975e-05
-  m_LinearDrag: 0
+  m_Mass: 3
+  m_LinearDrag: .5
   m_AngularDrag: .0500000007
   m_GravityScale: 1.5
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -6445,6 +6520,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 880582699}
+  - 114: {fileID: 880582700}
   m_Layer: 0
   m_Name: EnemySpawn
   m_TagString: Enemy Spawn
@@ -6464,6 +6540,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
+--- !u!114 &880582700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 880582698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnFrequency: .5
+  spawnDelay: 1
+  randomStart: 1
 --- !u!1 &889033328
 GameObject:
   m_ObjectHideFlags: 0
@@ -6472,6 +6562,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 889033329}
+  - 114: {fileID: 889033330}
   m_Layer: 0
   m_Name: EnemySpawn
   m_TagString: Enemy Spawn
@@ -6491,6 +6582,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 20
+--- !u!114 &889033330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 889033328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnFrequency: .5
+  spawnDelay: 1
+  randomStart: 1
 --- !u!1 &897705498
 GameObject:
   m_ObjectHideFlags: 0
@@ -7036,6 +7141,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 998728241}
+  - 114: {fileID: 998728242}
   m_Layer: 0
   m_Name: EnemySpawn
   m_TagString: Enemy Spawn
@@ -7055,6 +7161,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
+--- !u!114 &998728242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 998728240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnFrequency: .5
+  spawnDelay: 1
+  randomStart: 1
 --- !u!1 &999398556
 GameObject:
   m_ObjectHideFlags: 0
@@ -7690,6 +7810,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1126782142}
+  - 114: {fileID: 1126782143}
   m_Layer: 0
   m_Name: EnemySpawn
   m_TagString: Enemy Spawn
@@ -7709,6 +7830,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 21
+--- !u!114 &1126782143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1126782141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnFrequency: .5
+  spawnDelay: 1
+  randomStart: 1
 --- !u!1 &1154460204
 GameObject:
   m_ObjectHideFlags: 0
@@ -9116,9 +9251,9 @@ GameObject:
   - 212: {fileID: 1461284390}
   - 58: {fileID: 1461284393}
   - 50: {fileID: 1461284394}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: SprayBottle
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9201,11 +9336,11 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 1746125294}
   m_GameObject: {fileID: 1461284389}
-  m_Mass: 9.99999975e-05
-  m_LinearDrag: 0
+  m_Mass: 3
+  m_LinearDrag: .5
   m_AngularDrag: .0500000007
   m_GravityScale: 1.5
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -9822,9 +9957,9 @@ GameObject:
   - 212: {fileID: 1607002331}
   - 58: {fileID: 1607002330}
   - 50: {fileID: 1607002329}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: SprayBottle
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9836,11 +9971,11 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 438874833}
   m_GameObject: {fileID: 1607002328}
-  m_Mass: 9.99999975e-05
-  m_LinearDrag: 0
+  m_Mass: 3
+  m_LinearDrag: .5
   m_AngularDrag: .0500000007
   m_GravityScale: 1.5
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -9928,9 +10063,9 @@ GameObject:
   - 212: {fileID: 1613456942}
   - 58: {fileID: 1613456941}
   - 50: {fileID: 1613456940}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: SprayBottle
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9942,11 +10077,11 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 1382293231}
   m_GameObject: {fileID: 1613456939}
-  m_Mass: 9.99999975e-05
-  m_LinearDrag: 0
+  m_Mass: 3
+  m_LinearDrag: .5
   m_AngularDrag: .0500000007
   m_GravityScale: 1.5
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -10678,6 +10813,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1688159672}
+  - 114: {fileID: 1688159673}
   m_Layer: 0
   m_Name: EnemySpawn
   m_TagString: Enemy Spawn
@@ -10697,6 +10833,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
+--- !u!114 &1688159673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1688159671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnFrequency: .5
+  spawnDelay: 1
+  randomStart: 1
 --- !u!1 &1738130696
 GameObject:
   m_ObjectHideFlags: 0
@@ -11176,6 +11326,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1789651099}
+  - 114: {fileID: 1789651100}
   m_Layer: 0
   m_Name: EnemySpawn
   m_TagString: Enemy Spawn
@@ -11195,6 +11346,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
+--- !u!114 &1789651100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1789651098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnFrequency: .5
+  spawnDelay: 1
+  randomStart: 1
 --- !u!1 &1792085536
 GameObject:
   m_ObjectHideFlags: 0
@@ -11607,6 +11772,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1849927783}
+  - 114: {fileID: 1849927784}
   m_Layer: 0
   m_Name: EnemySpawn
   m_TagString: Enemy Spawn
@@ -11626,6 +11792,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
+--- !u!114 &1849927784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1849927782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnFrequency: .5
+  spawnDelay: 1
+  randomStart: 1
 --- !u!1 &1876673671
 GameObject:
   m_ObjectHideFlags: 0
@@ -11940,6 +12120,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1936274386}
+  - 114: {fileID: 1936274387}
   m_Layer: 0
   m_Name: EnemySpawn
   m_TagString: Enemy Spawn
@@ -11959,6 +12140,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 22
+--- !u!114 &1936274387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1936274385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnFrequency: .5
+  spawnDelay: 1
+  randomStart: 1
 --- !u!1 &1937025077
 GameObject:
   m_ObjectHideFlags: 0
