@@ -47,7 +47,7 @@ public class Holdable : MonoBehaviour {
 		}
 	}
 
-	public void GetHeld(CharacterMovement newHolder)
+	public virtual void GetHeld(CharacterMovement newHolder)
 	{
 		newHolder.holding = true;
 		beingHeld = true;
@@ -59,7 +59,7 @@ public class Holdable : MonoBehaviour {
 		rigidbody2D.isKinematic = true;
 	}
 	
-	public void GetDropped()
+	public virtual void GetDropped()
 	{
 		canBeHeld = false;
 		coolDownTimer = droppedCoolDown;

@@ -8,6 +8,16 @@ public class SprayBottle : Holdable {
 	void Start () {
 	
 	}
+
+	public override void GetHeld(CharacterMovement newHolder){
+		base.GetHeld(newHolder);
+		this.rigidbody2D.isKinematic = true;
+	}
+
+	public override void GetDropped(){
+		base.GetDropped();
+		this.rigidbody2D.isKinematic = false;
+	}
 	
 	// Update is called once per frame
 	void Update () {
