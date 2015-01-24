@@ -14,14 +14,15 @@ public class PlayerAttack : MonoBehaviour {
 	public InputControls inputControls;
 	public Shooter shooter;
 
-	public void Melee(){
+	public void Melee(InputControls.ControlState state){
+		if (state == InputControls.ControlState.held) return;
 		isMelee = true;
 		meleeTime = 0;
 		meleeFlash.gameObject.SetActive(true);
 	}
 
-	public void Shoot(){
-		shooter.Shoot();
+	public void Shoot(InputControls.ControlState state){
+		shooter.Shoot(state);
 	}
 
 	public void Drop(){
@@ -31,11 +32,12 @@ public class PlayerAttack : MonoBehaviour {
 	}
 
 	public void Update (){
-		if (!isMelee && inputControls.Attack()){
+		var attackState = inputControls.Attack();
+		if (!isMelee && attackState != InputControls.ControlState.none){
 			if (holdItem == null){
-				Melee();
+				Melee(attackState);
 			} else {
-				Shoot();
+				Shoot(attackState);
 			}
 		}
 
