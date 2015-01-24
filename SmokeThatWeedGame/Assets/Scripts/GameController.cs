@@ -25,6 +25,8 @@ public class GameController : MonoBehaviour {
 
 	public static int players = 4;
 
+	public static string activeProjectile = null;
+
 	public GameObject enemyPrefab;
 	public Transform[] spawners;
 

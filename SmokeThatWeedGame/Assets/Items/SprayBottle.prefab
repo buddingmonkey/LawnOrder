@@ -61,7 +61,7 @@ MonoBehaviour:
   holder: {fileID: 0}
   droppedCoolDown: 1
   dropSpeed: 10
-  sprayCoolDown: 1
+  bulletID: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

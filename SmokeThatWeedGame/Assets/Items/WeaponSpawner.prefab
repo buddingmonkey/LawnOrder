@@ -24,7 +24,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.0999985, y: -15.8999996, z: 0}
+  m_LocalPosition: {x: -17.2136097, y: -13.447197, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -45,6 +45,7 @@ MonoBehaviour:
   tickTockDelay: 1
   weaponPrefabs:
   - {fileID: 100000, guid: 4722596b884fd40a19b38fd0d5514a06, type: 2}
+  - {fileID: 172852, guid: daac945563b1f4fc88d206def3ce7957, type: 2}
   tickTockPrefab: {fileID: 179530, guid: c4c3986cc74714773a5b9486d7e9467d, type: 2}
   grabbed: 1
 --- !u!212 &21286022
