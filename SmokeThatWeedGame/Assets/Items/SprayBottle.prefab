@@ -25,7 +25,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Mass: 1
+  m_Mass: 9.99999975e-05
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1.5
@@ -56,12 +56,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da4b303faadc45a7aedd09759702d8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdable: 1
+  canBeHeld: 1
   beingHeld: 0
   holder: {fileID: 0}
-  sprayCoolDown: 1
   droppedCoolDown: 1
   dropSpeed: 10
+  sprayCoolDown: 1
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
