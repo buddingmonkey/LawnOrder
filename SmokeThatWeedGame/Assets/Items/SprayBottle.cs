@@ -4,6 +4,8 @@ using System.Collections;
 public class SprayBottle : Holdable {
 	public float sprayCoolDown = 1f;
 
+	public int bulletID =0;
+
 	// Use this for initialization
 	void Start () {
 	
