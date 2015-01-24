@@ -12,9 +12,9 @@ GameObject:
   - 212: {fileID: 21200000}
   - 58: {fileID: 5800000}
   - 50: {fileID: 5000000}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: SprayBottle
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,12 +56,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da4b303faadc45a7aedd09759702d8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdable: 1
+  canBeHeld: 1
   beingHeld: 0
   holder: {fileID: 0}
-  sprayCoolDown: 1
   droppedCoolDown: 1
   dropSpeed: 10
+  sprayCoolDown: 1
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -98,7 +98,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -21.5, y: -15.9650002}
+  m_AnchoredPosition: {x: -25.1690006, y: -15.9650002}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000
