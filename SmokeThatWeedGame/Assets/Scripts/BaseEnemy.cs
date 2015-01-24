@@ -20,7 +20,7 @@ public class BaseEnemy : MonoBehaviour {
 	new Rigidbody2D rigidbody;
 
 	float health;
-	float direction;
+	public float direction;
 	float width;
 	float halfWidth;
 	float height;
@@ -92,6 +92,10 @@ public class BaseEnemy : MonoBehaviour {
 			direction = -direction;
 			rigidbody.velocity = new Vector2(direction * Mathf.Abs(rigidbody.velocity.x), rigidbody.velocity.y);
 		}
+
+	}
+
+	public void OnCollision2d(Collider2D collider) {
 
 	}
 }
