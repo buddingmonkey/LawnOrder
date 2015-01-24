@@ -21,6 +21,7 @@ public class PlayerAttack : MonoBehaviour {
 	}
 
 	public void Shoot(){
+		shooter.Shoot();
 	}
 
 	public void Drop(){
