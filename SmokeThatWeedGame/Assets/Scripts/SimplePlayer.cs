@@ -5,18 +5,31 @@ using InControl;
 public class SimplePlayer : MonoBehaviour {
 	public int playerNum;
 
+	private float moveMultiplier = 1000;
 	private Rigidbody2D body;
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log(InputManager.Devices);
+		InputManager.Setup();
+		InputManager.AttachDevice( new UnityInputDevice( new BuffaloClassicGamepad() ) );
+		//Debug.Log(InputManager.Devices[0]);
 		body = this.rigidbody2D;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		var inputDevice = InputManager.Devices[0];//(InputManager.Devices.Count > playerNum) ? InputManager.Devices[playerNum] : null;
-		Debug.Log(inputDevice.DPad.Vector);
-		body.AddForce(Vector2.right * Time.deltaTime * inputDevice.LeftStick.X);
+
+		float move = 0;
+
+		if (Input.GetKey(KeyCode.RightArrow)){
+			move = 1;
+		} else if (Input.GetKey(KeyCode.LeftArrow)){
+			move = -1;
+		}
+
+		Debug.Log(Vector2.right * Time.deltaTime * move * moveMultiplier);
+
+		body.AddForce(Vector2.right * Time.deltaTime * move * moveMultiplier);
 	}
 }
