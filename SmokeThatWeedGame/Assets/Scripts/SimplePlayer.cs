@@ -10,8 +10,6 @@ public class SimplePlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		InputManager.Setup();
-		InputManager.AttachDevice( new UnityInputDevice( new BuffaloClassicGamepad() ) );
 		//Debug.Log(InputManager.Devices[0]);
 		body = this.rigidbody2D;
 	}
