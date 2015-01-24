@@ -8,23 +8,38 @@ public class BaseEnemy : MonoBehaviour {
 	public float startingHealth = 5;
 	public float speed = 1;
 	public float growthRateSec;
+	public float gravity;
+	public float terminalVelocity;
+
+	public int colliderMask = ~0x400;
 
 	float timeInStage;
 	int stage;
 	SpriteRenderer spriteRenderer;
-	new Transform transform;
+	new RectTransform transform;
+	new Rigidbody2D rigidbody;
 
 	float health;
 	float direction;
+	float width;
+	float halfWidth;
+	float height;
+	float halfHeight;
 
+	
 	// Use this for initialization
 	void Start () {
 		stage = 0;
 		timeInStage = 0;
-		spriteRenderer = (SpriteRenderer)GetComponent<SpriteRenderer> ();
+		spriteRenderer = GetComponent<SpriteRenderer> ();
+		rigidbody = GetComponent<Rigidbody2D> ();
 		health = startingHealth;
-		transform = GetComponent<Transform> ();
-		direction = 1;
+		transform = GetComponent<RectTransform> ();
+		direction = -1;
+		width = transform.rect.width;
+		halfWidth = transform.rect.width / 2;
+		height = transform.rect.width;
+		halfHeight = transform.rect.width / 2;
 	}
 	
 	// Update is called once per frame
@@ -36,9 +51,20 @@ public class BaseEnemy : MonoBehaviour {
 			spriteRenderer.sprite = stages[stage];
 		}
 
-//		if (stage >= movementStage) {
+		if (stage >= movementStage) {
 			Move ();
-//		}
+		}
+
+		ApplyGravity ();
+	}
+
+	void ApplyGravity() {
+		Vector2 v = rigidbody.velocity;
+		v += -Vector2.up * gravity * Time.deltaTime;
+		if (Mathf.Abs (v.y) > terminalVelocity) {
+			v.y = terminalVelocity * Mathf.Sign (v.y);
+		}
+		rigidbody.velocity = v;
 	}
 
 	public void TakeDamage(float damage) {
@@ -53,11 +79,17 @@ public class BaseEnemy : MonoBehaviour {
 	}
 
 	public void Move() {
-		Vector2 position = new Vector2 (transform.position.x,transform.position.y);
-		Vector2 moveTo = position + Vector2.right * direction * Time.deltaTime;
-		RaycastHit2D hit = Physics2D.Raycast(moveTo - (Vector2.up*.5f), -Vector2.up, .5f);
-		if (hit.transform != null) {
-			Debug.DrawRay(hit.point,-Vector3.up*.5f,Color.red);
+		rigidbody.velocity = Vector2.Lerp (rigidbody.velocity, new Vector2 (direction * speed,rigidbody.velocity.y), 0.9f);
+
+		Vector2 position = new Vector2 (transform.position.x, transform.position.y - halfHeight);
+		Vector2 moveTo = position + rigidbody.velocity * Time.deltaTime + direction*Vector2.right * halfWidth;
+//		Debug.DrawRay(moveTo, -Vector3.up*.5f, Color.green);
+		RaycastHit2D hit = Physics2D.Raycast(moveTo, -Vector2.up, .5f, colliderMask);
+		if (hit.collider == null) {
+//			Debug.DrawRay(moveTo,-Vector3.up*.5f,Color.red);
+			// hit edge, turn around
+			direction = -direction;
+			rigidbody.velocity = new Vector2(direction * Mathf.Abs(rigidbody.velocity.x), rigidbody.velocity.y);
 		}
 
 	}
