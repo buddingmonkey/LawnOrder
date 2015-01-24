@@ -77,6 +77,6 @@ public class GameController : MonoBehaviour {
 		player.GetComponent<CharacterMovement>().playerNum = playerNum;
 		currentPlayers[playerNum] = player;
 		player.name = "Player" + playerNum;
-		player.parent = spawners[playerNum];
+		player.SetParent(spawners[playerNum]);
 	}
 }

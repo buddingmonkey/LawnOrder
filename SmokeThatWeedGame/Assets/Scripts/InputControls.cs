@@ -8,7 +8,6 @@ public class InputControls : MonoBehaviour {
 
 	void Start(){
 		if (InputManager.Devices != null && InputManager.Devices.Count > player.playerNum){
-			Debug.Log ("Device Set!");
 			device = InputManager.Devices[player.playerNum];
 		}
 	}
