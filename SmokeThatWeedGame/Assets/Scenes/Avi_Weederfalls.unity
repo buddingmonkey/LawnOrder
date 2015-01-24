@@ -8914,6 +8914,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85634a81a1575a0488d0f776b2cde303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NewMapSize: {x: 50, y: 20}
+  MapSize: {x: 50, y: 20}
+  TileSize: {x: 0, y: 0}
+  ResourceFoler: 
+  TileLayers: []
+  PreviewSize: 49.7368431
+  SelectedLayerIndex: 0
+  ShowEdit: 1
 --- !u!4 &1430111203
 Transform:
   m_ObjectHideFlags: 0
