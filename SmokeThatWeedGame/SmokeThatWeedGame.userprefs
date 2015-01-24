@@ -1,11 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\InControl\Source\VersionInfo.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerAttack.cs">
     <Files>
-      <File FileName="Assets\Scripts\InputControls.cs" Line="10" Column="30" />
-      <File FileName="Assets\InControl\Source\InputManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\InControl\Source\VersionInfo.cs" Line="38" Column="30" />
-      <File FileName="Assets\Editor\VersionUpdater.cs" Line="51" Column="1" />
+      <File FileName="Assets/Scripts/SimplePlayer.cs" Line="14" Column="9" />
+      <File FileName="Assets/Scripts/Projectile.cs" Line="36" Column="4" />
+      <File FileName="Assets/Scripts/Shooter.cs" Line="16" Column="61" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="76" Column="20" />
+      <File FileName="Assets/Scripts/InputControls.cs" Line="58" Column="55" />
+      <File FileName="Assets/Scripts/Bounds.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/WorldBound.cs" Line="1" Column="1" />
+      <File FileName="Assets/Items/SprayBottle.cs" Line="17" Column="28" />
+      <File FileName="Assets/Scripts/PlayerAttack.cs" Line="18" Column="56" />
+      <File FileName="Assets/Items/Holdable.cs" Line="82" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
