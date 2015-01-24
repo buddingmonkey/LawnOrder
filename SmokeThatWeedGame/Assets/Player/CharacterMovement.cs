@@ -36,6 +36,9 @@ public class CharacterMovement : MonoBehaviour {
 	}
 	PlayerState state;
 
+	private LayerMask playerLayer;
+	private static LayerMask platformLayer;
+
 	// Use this for initialization
 	void Start () {
 		input = GetComponent<InputControls>();
@@ -47,11 +50,20 @@ public class CharacterMovement : MonoBehaviour {
 		halfWidth = width / 2 * 0.95f;
 		Debug.Log (height);
 		state = PlayerState.Falling;
+
+	
+		//if (platformLayer == null)
+		//{
+			platformLayer = LayerMask.NameToLayer ("Platform");
+		//}
+		playerLayer = LayerMask.NameToLayer ("Player"+playerNum);
+		gameObject.layer = playerLayer;
 	}
 	
 	// Update is called once per frame
 
 	void Update () {
+		Physics2D.IgnoreLayerCollision (playerLayer, platformLayer, rigidbody2D.velocity.y > 0);
 
 		pos2D = new Vector2 (trans.position.x, trans.position.y);
 

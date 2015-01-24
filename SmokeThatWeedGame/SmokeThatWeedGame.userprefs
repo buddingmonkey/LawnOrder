@@ -1,9 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\InputControls.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Player/CharacterMovement.cs">
     <Files>
-      <File FileName="Assets\InControl\Source\VersionInfo.cs" Line="134" Column="2" />
-      <File FileName="Assets\Scripts\InputControls.cs" Line="10" Column="1" />
+      <File FileName="Assets/Player/CharacterMovement.cs" Line="66" Column="3" />
+      <File FileName="Assets/Items/Holdable.cs" Line="27" Column="18" />
+      <File FileName="Assets/Items/SprayBottle.cs" Line="14" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
