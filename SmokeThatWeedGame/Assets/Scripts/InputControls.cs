@@ -42,7 +42,20 @@ public class InputControls : MonoBehaviour {
 			return device.DPadX;
 		}
 	}
-
+	
+	public float YAxis() {
+		if (this.device == null){
+			if (player.playerNum != 0 ) return 0;
+			return Input.GetAxis ("Vertical");
+		}
+		
+		if (Mathf.Abs(device.LeftStickY) > Mathf.Abs(device.DPadY)){
+			return device.LeftStickY;
+		} else {
+			return device.DPadY;
+		}
+	}
+	
 	public bool Attack(){
 		if (this.device == null){
 			if (player.playerNum != 0 )return false;
