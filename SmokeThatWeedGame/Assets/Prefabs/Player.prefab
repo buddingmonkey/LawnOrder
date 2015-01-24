@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  player: {fileID: 11418600}
 --- !u!114 &11484768
 MonoBehaviour:
   m_ObjectHideFlags: 1

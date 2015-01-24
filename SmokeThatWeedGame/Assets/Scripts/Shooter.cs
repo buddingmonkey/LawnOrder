@@ -17,6 +17,7 @@ public class Shooter : MonoBehaviour {
 		Transform b = (Transform)Instantiate (currentProjectile, shootLocation.position, Quaternion.identity);
 		currentCoolDown = coolDown;
 		b.GetComponent<Projectile>().player = this.gameObject;
+		b.GetComponent<AttackHandler>().player = this.gameObject.GetComponent<CharacterMovement>();
 	}
 	
 	// Update is called once per frame

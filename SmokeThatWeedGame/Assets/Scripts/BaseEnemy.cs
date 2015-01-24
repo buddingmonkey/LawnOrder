@@ -11,6 +11,8 @@ public class BaseEnemy : MonoBehaviour {
 	public float gravity;
 	public float terminalVelocity;
 
+	public int points = 100;
+
 	public int colliderMask = ~0x400;
 
 	float timeInStage;
@@ -68,15 +70,16 @@ public class BaseEnemy : MonoBehaviour {
 		rigidbody.velocity = v;
 	}
 
-	public void TakeDamage(float damage, Vector2 damageDirection) {
+	public void TakeDamage(float damage, Vector2 damageDirection, int player) {
 		rigidbody.AddForce (Vector2.up * 10 + damageDirection * 10 * damage, ForceMode2D.Impulse);//(damageDirection * damage * 10 + Vector2.up, ForceMode2D.Impulse);
 		health -= damage;
 		if (health < 0) {
-			Die();
+			Die(player);
 		}
 	}
 
-	void Die() {
+	void Die(int player) {
+		GameController.score[player] += this.points;
 		Destroy (gameObject);
 	}
 
