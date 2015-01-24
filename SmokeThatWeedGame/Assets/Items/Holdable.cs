@@ -49,7 +49,8 @@ public class Holdable : MonoBehaviour {
 
 	public virtual void GetHeld(CharacterMovement newHolder)
 	{
-		newHolder.holding = true;
+		var attack = newHolder.GetComponent<PlayerAttack>();
+		attack.isHolding = true;
 		beingHeld = true;
 		holder = newHolder;
 		transform.parent = newHolder.transform;
@@ -61,10 +62,11 @@ public class Holdable : MonoBehaviour {
 	
 	public virtual void GetDropped()
 	{
+		var attack = holder.GetComponent<PlayerAttack>();
 		canBeHeld = false;
 		coolDownTimer = droppedCoolDown;
 		beingHeld = false;
-		holder.holding = false;
+		attack.isHolding = false;
 		holder = null;
 		transform.parent = null;
 		rigidbody2D.velocity = Vector2.up*dropSpeed;
@@ -80,7 +82,7 @@ public class Holdable : MonoBehaviour {
 		CharacterMovement theCharacter = coll.gameObject.GetComponent<CharacterMovement> ();
 		if (theCharacter != null)
 		{
-			if(!theCharacter.holding)
+			if(!theCharacter.GetComponent<PlayerAttack>().isHolding)
 			{
 				Debug.Log ("grabbed by "+theCharacter.gameObject.name);
 				GetHeld (theCharacter);

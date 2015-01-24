@@ -17,6 +17,7 @@ GameObject:
   - 114: {fileID: 11418602}
   - 114: {fileID: 11415140}
   - 114: {fileID: 11455140}
+  - 114: {fileID: 11484768}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -136,8 +137,6 @@ MonoBehaviour:
   strikeCoolDown: .400000006
   strikeRange: 1
   playerNum: 0
-  holding: 0
-  meleeFlash: {fileID: 100000, guid: 75907a9cdf5c34774be6b93d323a915a, type: 2}
 --- !u!114 &11418602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -165,6 +164,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 5
+--- !u!114 &11484768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 342bdcedc2f8345089f68789869c9bba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHolding: 0
+  meleeFlash: {fileID: 0}
+  movement: {fileID: 11418600}
 --- !u!212 &21218602
 SpriteRenderer:
   m_ObjectHideFlags: 1
