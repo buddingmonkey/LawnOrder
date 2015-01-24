@@ -1,14 +1,22 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using InControl;
 
 public class InputControls : MonoBehaviour {
+
+	public enum ControlState{
+		down,
+		held,
+		none
+	}
+
 	public CharacterMovement player;
 	InputDevice device;
 
 	void Start(){
 		if (InputManager.Devices != null && InputManager.Devices.Count > player.playerNum){
 			device = InputManager.Devices[player.playerNum];
+			Debug.Log("Device attached: " + device.Name + " Player: " + player.playerNum);
 		}
 	}
 
@@ -42,15 +50,44 @@ public class InputControls : MonoBehaviour {
 			return device.DPadX;
 		}
 	}
-
-	public bool Attack(){
+	
+	public float YAxis() {
 		if (this.device == null){
-			if (player.playerNum != 0 )return false;
-			return Input.GetButtonDown ("Fire1"); 
+			if (player.playerNum != 0 ) return 0;
+			return Input.GetAxis ("Vertical");
+		}
+		
+		if (Mathf.Abs(device.LeftStickY) > Mathf.Abs(device.DPadY)){
+			return device.LeftStickY;
+		} else {
+			return device.DPadY;
+		}
+	}
+
+	public ControlState Attack(){
+		ControlState state = ControlState.none;
+
+		if (this.device == null){
+			if (player.playerNum != 0 )return ControlState.none;
+
+			if (Input.GetButtonDown("Fire1")){
+				state = ControlState.down;
+			} else if (Input.GetButton("Fire1")){
+				state = ControlState.held;
+			}
+
+			return state; 
 		}
 
 		InputControl ctrl = device.GetControl (InputControlType.Action2);
-		return ctrl.IsPressed;
+		if (ctrl.IsPressed){
+			if (ctrl.HasChanged){
+				state = ControlState.down;
+			} else {
+				state = ControlState.held;
+			}
+		}
+		return state;
 	}
 
 	public bool Throw(){

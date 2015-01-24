@@ -50,6 +50,7 @@ GameObject:
   - 4: {fileID: 456948}
   - 212: {fileID: 21256948}
   - 61: {fileID: 6156948}
+  - 114: {fileID: 11466776}
   m_Layer: 16
   m_Name: MeleeFlash
   m_TagString: Attack
@@ -76,8 +77,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .82099998, y: -.107000001, z: 0}
-  m_LocalScale: {x: 1.41155446, y: 2.39167094, z: .462735891}
+  m_LocalPosition: {x: .819999993, y: .0199999996, z: 0}
+  m_LocalScale: {x: 1.41155446, y: 3.19009352, z: .462735891}
   m_Children: []
   m_Father: {fileID: 22418602}
   m_RootOrder: 0
@@ -177,6 +178,7 @@ MonoBehaviour:
   strikeCoolDown: .400000006
   strikeRange: 1
   playerNum: 0
+  direction: 1
 --- !u!114 &11418602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -206,6 +208,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 5
+--- !u!114 &11466776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7044199f14f445f6addd0027970a084, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  stopAfterHit: 0
 --- !u!114 &11484768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -284,7 +299,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -26.6700001, y: 20.3099995}
+  m_AnchoredPosition: {x: -29.0092583, y: -11.552866}
   m_SizeDelta: {x: 1.02439022, y: 1.02439022}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000

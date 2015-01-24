@@ -11,11 +11,13 @@ public class Shooter : MonoBehaviour {
 
 	public Transform shootLocation;
 
-	public void Shoot(){
-		if (currentProjectile == null || currentCoolDown > 0) return;
+	public void Shoot(InputControls.ControlState state){
+		if (currentProjectile == null || currentCoolDown > 0 || 
+		    (!autoFire && state == InputControls.ControlState.held)) return;
 		Transform b = (Transform)Instantiate (currentProjectile, shootLocation.position, Quaternion.identity);
 		currentCoolDown = coolDown;
 		b.GetComponent<Projectile>().player = this.gameObject;
+		b.GetComponent<AttackHandler>().player = this.gameObject.GetComponent<CharacterMovement>();
 	}
 	
 	// Update is called once per frame
