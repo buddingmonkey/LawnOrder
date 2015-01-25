@@ -2,11 +2,49 @@
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.5-c014 79.151805, 2013/04/09-12:08:21        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description rdf:about=""
-            xmlns:xmpDM="http://ns.adobe.com/xmp/1.0/DynamicMedia/"
             xmlns:xmp="http://ns.adobe.com/xap/1.0/"
             xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
             xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#"
-            xmlns:dc="http://purl.org/dc/elements/1.1/">
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:xmpDM="http://ns.adobe.com/xmp/1.0/DynamicMedia/">
+         <xmp:MetadataDate>2015-01-26T00:00:34-05:00</xmp:MetadataDate>
+         <xmp:ModifyDate>2015-01-26T00:00:34-05:00</xmp:ModifyDate>
+         <xmpMM:InstanceID>xmp.iid:b8c3b60d-662c-e64e-ba28-a53f2ddfec86</xmpMM:InstanceID>
+         <xmpMM:DocumentID>xmp.did:3e4ceeeb-eff9-2343-a80b-a3c07e73c9cf</xmpMM:DocumentID>
+         <xmpMM:OriginalDocumentID>xmp.did:3e4ceeeb-eff9-2343-a80b-a3c07e73c9cf</xmpMM:OriginalDocumentID>
+         <xmpMM:History>
+            <rdf:Seq>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:3e4ceeeb-eff9-2343-a80b-a3c07e73c9cf</stEvt:instanceID>
+                  <stEvt:when>2015-01-25T05:27:18-05:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:4eb3daff-124d-e245-a346-5baae7429144</stEvt:instanceID>
+                  <stEvt:when>2015-01-25T05:27:18-05:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:7e12f54d-4de8-8349-9801-668e67762694</stEvt:instanceID>
+                  <stEvt:when>2015-01-26T00:00:34-05:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/metadata</stEvt:changed>
+               </rdf:li>
+               <rdf:li rdf:parseType="Resource">
+                  <stEvt:action>saved</stEvt:action>
+                  <stEvt:instanceID>xmp.iid:b8c3b60d-662c-e64e-ba28-a53f2ddfec86</stEvt:instanceID>
+                  <stEvt:when>2015-01-26T00:00:34-05:00</stEvt:when>
+                  <stEvt:softwareAgent>Adobe Audition CC (Windows)</stEvt:softwareAgent>
+                  <stEvt:changed>/</stEvt:changed>
+               </rdf:li>
+            </rdf:Seq>
+         </xmpMM:History>
+         <dc:format>audio/ogg; codec="vorbis"</dc:format>
          <xmpDM:Tracks>
             <rdf:Bag>
                <rdf:li rdf:parseType="Resource">
@@ -26,30 +64,6 @@
                </rdf:li>
             </rdf:Bag>
          </xmpDM:Tracks>
-         <xmp:MetadataDate>2015-01-25T05:27:18-05:00</xmp:MetadataDate>
-         <xmp:ModifyDate>2015-01-25T05:27:18-05:00</xmp:ModifyDate>
-         <xmpMM:InstanceID>xmp.iid:4eb3daff-124d-e245-a346-5baae7429144</xmpMM:InstanceID>
-         <xmpMM:DocumentID>xmp.did:3e4ceeeb-eff9-2343-a80b-a3c07e73c9cf</xmpMM:DocumentID>
-         <xmpMM:OriginalDocumentID>xmp.did:3e4ceeeb-eff9-2343-a80b-a3c07e73c9cf</xmpMM:OriginalDocumentID>
-         <xmpMM:History>
-            <rdf:Seq>
-               <rdf:li rdf:parseType="Resource">
-                  <stEvt:action>saved</stEvt:action>
-                  <stEvt:instanceID>xmp.iid:3e4ceeeb-eff9-2343-a80b-a3c07e73c9cf</stEvt:instanceID>
-                  <stEvt:when>2015-01-25T05:27:18-05:00</stEvt:when>
-                  <stEvt:softwareAgent>Adobe Audition CC (Windows)</stEvt:softwareAgent>
-                  <stEvt:changed>/metadata</stEvt:changed>
-               </rdf:li>
-               <rdf:li rdf:parseType="Resource">
-                  <stEvt:action>saved</stEvt:action>
-                  <stEvt:instanceID>xmp.iid:4eb3daff-124d-e245-a346-5baae7429144</stEvt:instanceID>
-                  <stEvt:when>2015-01-25T05:27:18-05:00</stEvt:when>
-                  <stEvt:softwareAgent>Adobe Audition CC (Windows)</stEvt:softwareAgent>
-                  <stEvt:changed>/</stEvt:changed>
-               </rdf:li>
-            </rdf:Seq>
-         </xmpMM:History>
-         <dc:format>audio/ogg; codec="vorbis"</dc:format>
       </rdf:Description>
    </rdf:RDF>
 </x:xmpmeta>

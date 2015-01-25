@@ -26,26 +26,25 @@
                </rdf:li>
             </rdf:Bag>
          </xmpDM:Tracks>
-         <xmp:MetadataDate>2015-01-25T23:11:51-05:00</xmp:MetadataDate>
-         <xmp:ModifyDate>2015-01-25T23:11:51-05:00</xmp:ModifyDate>
-         <xmpMM:InstanceID>xmp.iid:4fe08e90-ec52-2c46-adda-a0e804e0598d</xmpMM:InstanceID>
-         <xmpMM:DocumentID>xmp.did:742ac086-1778-624a-ac68-6caa7c317155</xmpMM:DocumentID>
-         <xmpMM:OriginalDocumentID>xmp.did:742ac086-1778-624a-ac68-6caa7c317155</xmpMM:OriginalDocumentID>
+         <xmp:MetadataDate>2015-01-26T00:00:24-05:00</xmp:MetadataDate>
+         <xmpMM:InstanceID>xmp.iid:f194aa50-5f8a-cf44-a115-bd9d4898c88b</xmpMM:InstanceID>
+         <xmpMM:DocumentID>xmp.did:4d394a9f-22e8-5b44-8604-54c3030b09de</xmpMM:DocumentID>
+         <xmpMM:OriginalDocumentID>xmp.did:4d394a9f-22e8-5b44-8604-54c3030b09de</xmpMM:OriginalDocumentID>
          <xmpMM:History>
             <rdf:Seq>
                <rdf:li rdf:parseType="Resource">
                   <stEvt:action>saved</stEvt:action>
-                  <stEvt:instanceID>xmp.iid:742ac086-1778-624a-ac68-6caa7c317155</stEvt:instanceID>
-                  <stEvt:when>2015-01-25T23:11:51-05:00</stEvt:when>
+                  <stEvt:instanceID>xmp.iid:4d394a9f-22e8-5b44-8604-54c3030b09de</stEvt:instanceID>
+                  <stEvt:when>2015-01-26T00:00:24-05:00</stEvt:when>
                   <stEvt:softwareAgent>Adobe Audition CC (Windows)</stEvt:softwareAgent>
                   <stEvt:changed>/metadata</stEvt:changed>
                </rdf:li>
                <rdf:li rdf:parseType="Resource">
                   <stEvt:action>saved</stEvt:action>
-                  <stEvt:instanceID>xmp.iid:4fe08e90-ec52-2c46-adda-a0e804e0598d</stEvt:instanceID>
-                  <stEvt:when>2015-01-25T23:11:51-05:00</stEvt:when>
+                  <stEvt:instanceID>xmp.iid:f194aa50-5f8a-cf44-a115-bd9d4898c88b</stEvt:instanceID>
+                  <stEvt:when>2015-01-26T00:00:24-05:00</stEvt:when>
                   <stEvt:softwareAgent>Adobe Audition CC (Windows)</stEvt:softwareAgent>
-                  <stEvt:changed>/</stEvt:changed>
+                  <stEvt:changed>/metadata</stEvt:changed>
                </rdf:li>
             </rdf:Seq>
          </xmpMM:History>
