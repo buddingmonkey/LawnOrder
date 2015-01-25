@@ -4048,7 +4048,7 @@ GameObject:
   - 58: {fileID: 410681143}
   - 50: {fileID: 410681142}
   - 114: {fileID: 410681141}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: FlameThrower
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -4134,7 +4134,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -.100000001}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1166176670}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
@@ -8285,6 +8286,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1617784495}
   m_RootOrder: 3
+--- !u!1 &1166176668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 104382, guid: daac945563b1f4fc88d206def3ce7957, type: 2}
+  m_PrefabInternal: {fileID: 280329243}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1166176670}
+  - 58: {fileID: 1166176669}
+  m_Layer: 18
+  m_Name: Trigger
+  m_TagString: Weapon
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!58 &1166176669
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5804382, guid: daac945563b1f4fc88d206def3ce7957,
+    type: 2}
+  m_PrefabInternal: {fileID: 280329243}
+  m_GameObject: {fileID: 1166176668}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Radius: .5
+  m_Center: {x: 0, y: 0}
+--- !u!4 &1166176670
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 404382, guid: daac945563b1f4fc88d206def3ce7957, type: 2}
+  m_PrefabInternal: {fileID: 280329243}
+  m_GameObject: {fileID: 1166176668}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 410681145}
+  m_RootOrder: 0
 --- !u!1 &1174038553
 GameObject:
   m_ObjectHideFlags: 0
@@ -10334,6 +10375,7 @@ GameObject:
   - 4: {fileID: 1605330224}
   - 114: {fileID: 1605330223}
   - 114: {fileID: 1605330226}
+  - 114: {fileID: 1605330225}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -10376,6 +10418,22 @@ Transform:
   - {fileID: 981085949}
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &1605330225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11492188, guid: 48293c12e4c524775b8c772256f33784,
+    type: 2}
+  m_PrefabInternal: {fileID: 1274078874}
+  m_GameObject: {fileID: 1605330222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e805bd7b71e444d96b3f4d130a09e9ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolConfigs:
+  - name: PlantBlood
+    system: {fileID: 436250, guid: 9c02eda7065b14ac68dcf4d3326d33b6, type: 2}
+    hardLimit: 50
 --- !u!114 &1605330226
 MonoBehaviour:
   m_ObjectHideFlags: 0
