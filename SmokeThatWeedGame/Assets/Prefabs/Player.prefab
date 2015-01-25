@@ -172,7 +172,7 @@ MonoBehaviour:
   gravity: 50
   terminalVelocity: 50
   maxSpeed: 10
-  jumpSpeed: 8
+  jumpSpeed: 10
   maxAcceleration: .899999976
   maxJumpDuration: .25
   strikeCoolDown: .400000006
