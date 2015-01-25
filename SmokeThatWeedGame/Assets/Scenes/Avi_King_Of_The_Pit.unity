@@ -741,6 +741,7 @@ MonoBehaviour:
   tickTockDelay: 1
   weaponPrefabs:
   - {fileID: 100000, guid: 4722596b884fd40a19b38fd0d5514a06, type: 2}
+  - {fileID: 172852, guid: daac945563b1f4fc88d206def3ce7957, type: 2}
   tickTockPrefab: {fileID: 179530, guid: c4c3986cc74714773a5b9486d7e9467d, type: 2}
   grabbed: 1
 --- !u!212 &100307805

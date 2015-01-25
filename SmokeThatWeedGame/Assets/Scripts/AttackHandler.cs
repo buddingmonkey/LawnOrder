@@ -12,7 +12,7 @@ public class AttackHandler : MonoBehaviour {
 			var enemy = collider.GetComponentInParent<BaseEnemy>();
 			Vector2 dir = new Vector2((collider.transform.position - transform.position).x > 0 ? 1 : -1, 0);
 
-			if (this.tag == "Projectile" && this.name != GameController.activeProjectile){
+			if (this.tag != "Projectile" || this.name != GameController.activeProjectile){
 				enemy.TakeDamage(damage, dir, player.playerNum);
 			}
 

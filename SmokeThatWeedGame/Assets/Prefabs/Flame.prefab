@@ -70,11 +70,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: 3
-  speed: 20
+  speed: 15
   direction: {x: 1, y: 0}
   velocity: {x: 0, y: 0}
   player: {fileID: 0}
-  lifeTime: .25
+  lifeTime: .330000013
 --- !u!114 &11441872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7044199f14f445f6addd0027970a084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: .100000001
+  damage: .5
   player: {fileID: 0}
   stopAfterHit: 1
 --- !u!212 &21241872
