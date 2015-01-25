@@ -70,6 +70,7 @@ namespace InControl
 			"InControl.Xbox360WinProfile",
 			"InControl.XboxOneProfile",
 			"InControl.XboxOneWinProfile",
+			"InControl.BuffaloClassicGamepad"
 		};
 	}
 }
