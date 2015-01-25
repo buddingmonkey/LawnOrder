@@ -20,6 +20,7 @@ namespace InControl
 		
 		static void DiscoverProfiles()
 		{
+			return;
 			var unityInputDeviceProfileType = typeof(InControl.UnityInputDeviceProfile);
 			var autoDiscoverAttributeType = typeof(InControl.AutoDiscover);
 

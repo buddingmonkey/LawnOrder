@@ -13,6 +13,7 @@ namespace InControl
 			"InControl.AndroidTVProfile",
 			"InControl.AndroidTVRemoteProfile",
 			"InControl.AppleMFiProfile",
+			"InControl.BuffaloClassicGamepad",
 			"InControl.ExecutionerXProfile",
 			"InControl.GameStickLinuxProfile",
 			"InControl.GameStickProfile",
