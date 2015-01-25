@@ -82,6 +82,8 @@ public class BaseEnemy : MonoBehaviour {
 
 	void Die(int player) {
 		GameController.score[player] += this.points;
+		EnemySpawner.currentEnemyCount--;
+
 		Destroy (gameObject);
 	}
 
