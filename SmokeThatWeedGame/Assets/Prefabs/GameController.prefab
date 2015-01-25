@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 492392}
   - 114: {fileID: 11492392}
   - 114: {fileID: 11438308}
+  - 114: {fileID: 11499398}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -43,6 +44,7 @@ MonoBehaviour:
   spawnFrequency: 3
   spawnDelay: 1
   randomStart: 0
+  direction: 0
 --- !u!114 &11492392
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -60,7 +62,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  screenManager: {fileID: 11499398}
   playerPrefab: {fileID: 22418602, guid: 7e6c59a726f614ac99dcd592f8586521, type: 2}
+  roundLength: 0
+--- !u!114 &11499398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9460eff6aa2d40119c87251cd086b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverPanel: {fileID: 22436858, guid: 2fcb2e083b3c746cb9d5a8eebc761a8e, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
