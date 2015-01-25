@@ -5,7 +5,8 @@ public class BaseEnemy : MonoBehaviour {
 
 	public Sprite[] stages;
 	public int movementStage = 2;
-	public float startingHealth = 5;
+	public float fullHealth = 5;
+	public float saplingHealth = 2;
 	public float speed = 1;
 	public float growthRateSec;
 	public float gravity;
@@ -36,7 +37,7 @@ public class BaseEnemy : MonoBehaviour {
 		timeInStage = 0;
 		spriteRenderer = GetComponent<SpriteRenderer> ();
 		rigidbody = GetComponent<Rigidbody2D> ();
-		health = startingHealth;
+		health = saplingHealth;
 		transform = GetComponent<RectTransform> ();
 		direction = -1;
 		halfWidth = transform.rect.width / 2;
@@ -52,6 +53,7 @@ public class BaseEnemy : MonoBehaviour {
 			timeInStage = 0;
 			//spriteRenderer.sprite = stages[stage];
 			animator.SetInteger("maturity",stage);
+			health += (fullHealth-saplingHealth) / movementStage;
 		}
 		timeSinceDamaged += Time.deltaTime;
 
@@ -60,6 +62,12 @@ public class BaseEnemy : MonoBehaviour {
 		}
 
 		ApplyGravity ();
+	}
+
+	void FixedUpdate() {
+		if (stage < movementStage) {
+			rigidbody.velocity = new Vector2 (0, rigidbody.velocity.y);
+		}
 	}
 
 	void ApplyGravity() {
