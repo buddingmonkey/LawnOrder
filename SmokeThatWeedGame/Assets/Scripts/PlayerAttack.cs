@@ -43,11 +43,8 @@ public class PlayerAttack : MonoBehaviour {
 				meleeFlash.localRotation = Quaternion.AngleAxis(90, Vector3.forward);
 			}
 		} else {
-			if (movement.direction < 0) {
-				meleeFlash.position = transform.position - new Vector3(meleeOffset.x, meleeOffset.y);
-			} else {
-				//meleeFlash.position = transform.position + new Vector3(meleeOffset.x, meleeOffset.y);
-			}
+			meleeFlash.localRotation = Quaternion.AngleAxis(0, Vector3.forward);
+			meleeFlash.localPosition = new Vector3(meleeOffset.x, meleeOffset.y);
 		}
 
 
