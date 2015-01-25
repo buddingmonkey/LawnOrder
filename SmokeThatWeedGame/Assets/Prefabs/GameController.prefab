@@ -160,6 +160,8 @@ MonoBehaviour:
   audioClips:
   - name: Jump
     clip: {fileID: 8300000, guid: f38bff31181193d489c39eabcaefa8d6, type: 3}
+  - name: Shoot
+    clip: {fileID: 8300000, guid: 7c0be5c37b4ff92479532eaa855e6b91, type: 3}
 --- !u!114 &11486086
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -176,6 +178,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 239e1a968e7ee7e46811aed65c166627, type: 3}
   clipIndex: 0
   selectRandom: 1
+  playMusic: 1
 --- !u!114 &11492392
 MonoBehaviour:
   m_ObjectHideFlags: 1
