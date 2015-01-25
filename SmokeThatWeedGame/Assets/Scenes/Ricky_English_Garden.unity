@@ -11022,7 +11022,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1174038554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13966,7 +13966,7 @@ MonoBehaviour:
   - {fileID: 563323957}
   screenManager: {fileID: 1605330226}
   playerPrefab: {fileID: 22418602, guid: 7e6c59a726f614ac99dcd592f8586521, type: 2}
-  roundLength: 180
+  roundLength: 90
 --- !u!4 &1605330224
 Transform:
   m_ObjectHideFlags: 0

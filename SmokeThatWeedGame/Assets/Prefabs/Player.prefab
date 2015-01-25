@@ -197,6 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 5
+  invincible: 0
 --- !u!114 &11466776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,6 +212,7 @@ MonoBehaviour:
   damage: 3
   player: {fileID: 11418600}
   stopAfterHit: 0
+  health: {fileID: 11455140}
 --- !u!114 &11484768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -229,6 +231,7 @@ MonoBehaviour:
   front: {fileID: 418602}
   inputControls: {fileID: 11418598}
   shooter: {fileID: 11418602}
+  health: {fileID: 11455140}
 --- !u!212 &21218602
 SpriteRenderer:
   m_ObjectHideFlags: 1

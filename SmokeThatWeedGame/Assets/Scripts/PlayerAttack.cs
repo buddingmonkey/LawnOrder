@@ -13,6 +13,7 @@ public class PlayerAttack : MonoBehaviour {
 	public Transform front;
 	public InputControls inputControls;
 	public Shooter shooter;
+	public PlayerHealth health;
 
 	Vector2 meleeOffset;
 	public void Start() {
@@ -23,6 +24,8 @@ public class PlayerAttack : MonoBehaviour {
 		if (state == InputControls.ControlState.held) return;
 		isMelee = true;
 		meleeTime = 0;
+
+
 
 		// get game controller direction or player direction
 		Vector2 d = new Vector2(inputControls.XAxis (), inputControls.YAxis ()).normalized;
@@ -77,6 +80,7 @@ public class PlayerAttack : MonoBehaviour {
 			if (meleeTime >= meleeAttackLength){
 				isMelee = false;
 				meleeFlash.gameObject.SetActive(false);
+				health.invincible = false;
 			}
 		}
 	}

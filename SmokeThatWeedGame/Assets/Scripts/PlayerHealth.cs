@@ -9,6 +9,8 @@ public class PlayerHealth : MonoBehaviour {
 	float flashTime;
 	new SpriteRenderer renderer;
 
+	public bool invincible = false;
+
 	// Use this for initialization
 	void Start () {
 		renderer = GetComponent<SpriteRenderer> ();
@@ -41,7 +43,7 @@ public class PlayerHealth : MonoBehaviour {
 	
 	void OnCollisionEnter2D (Collision2D collision)
 	{
-		if (timeHurt > 1) {
+		if (timeHurt > 1 || !invincible) {
 			if (collision.collider.gameObject.CompareTag ("Enemy")) {
 				health -= 1;
 				if (health < 0) {
