@@ -417,7 +417,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: .100000001
+      scalar: .200000003
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -484,13 +484,13 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: 0
     inheritVelocity: 0
-    maxNumParticles: 100
+    maxNumParticles: 25
   ShapeModule:
     serializedVersion: 2
     enabled: 1
     type: 4
     radius: .265569687
-    angle: 83.9316559
+    angle: 60.9965286
     length: 5
     boxX: 1
     boxY: 1
@@ -544,14 +544,14 @@ ParticleSystem:
     time3: 0
     m_BurstCount: 1
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       scalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 1
+          value: .484375
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -619,10 +619,10 @@ ParticleSystem:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 4294967295
+          rgba: 4293573735
         key1:
           serializedVersion: 2
-          rgba: 4294967295
+          rgba: 4293573735
         key2:
           serializedVersion: 2
           rgba: 0
@@ -650,7 +650,7 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 52814
+        atime1: 34117
         atime2: 65535
         atime3: 0
         atime4: 0
@@ -1385,7 +1385,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -23.8716507, y: -10.5703793}
+  m_AnchoredPosition: {x: -23.8459511, y: -10.2121944}
   m_SizeDelta: {x: 1.02439022, y: 1.02439022}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22472976

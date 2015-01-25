@@ -42,9 +42,9 @@ public class PlayerAttack : MonoBehaviour {
 			meleeFlash.localRotation = Quaternion.AngleAxis(0, Vector3.forward);
 			// left/right
 			if (d.x < 0 || d.x == 0 && movement.direction < 0) {
-				meleeFlash.position = transform.position - new Vector3(meleeOffset.x, meleeOffset.y);
+				//meleeFlash.position = transform.position - new Vector3(meleeOffset.x, meleeOffset.y);
 			} else {
-				meleeFlash.position = transform.position + new Vector3(meleeOffset.x, meleeOffset.y);
+				//meleeFlash.position = transform.position + new Vector3(meleeOffset.x, meleeOffset.y);
 			}
 		}
 
