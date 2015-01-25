@@ -127,6 +127,8 @@ public class CharacterMovement : MonoBehaviour {
 		} else if (rigidbody.velocity.x > 0) {
 			direction = 1;
 		}
+		transform.localScale = new Vector3(direction, 1, 1);
+
 	}
 
 }
