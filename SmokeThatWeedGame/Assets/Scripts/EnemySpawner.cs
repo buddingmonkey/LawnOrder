@@ -36,7 +36,7 @@ public class EnemySpawner : MonoBehaviour {
 	}
 
 	void Spawn() {
-		Debug.Log (currentEnemyCount+" enemies present!!!!");
+//		Debug.Log (currentEnemyCount+" enemies present!!!!");
 		if (currentEnemyCount >= maxEnemyCount)
 			return;
 
