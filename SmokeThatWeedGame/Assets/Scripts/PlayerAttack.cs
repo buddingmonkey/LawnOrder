@@ -15,6 +15,7 @@ public class PlayerAttack : MonoBehaviour {
 	public Shooter shooter;
 	public PlayerHealth health;
 
+	float lastDirection = 0;
 	Vector2 meleeOffset;
 	public void Start() {
 		meleeOffset = meleeFlash.position - transform.position;
@@ -25,10 +26,13 @@ public class PlayerAttack : MonoBehaviour {
 		isMelee = true;
 		meleeTime = 0;
 
-
-
 		// get game controller direction or player direction
 		Vector2 d = new Vector2(inputControls.XAxis (), inputControls.YAxis ()).normalized;
+		if (d.x < 0) {
+			lastDirection = -1;
+		} else if (d.x > 0) {
+			lastDirection = 1;
+		}
 		if (Mathf.Abs(d.y) > Mathf.Abs(d.x) && Mathf.Abs(d.y) > 0.9f) {
 			// up/down
 			if (d.y > 0) {
@@ -38,11 +42,9 @@ public class PlayerAttack : MonoBehaviour {
 				meleeFlash.position = transform.position - new Vector3(meleeOffset.y, meleeOffset.x);
 				meleeFlash.localRotation = Quaternion.AngleAxis(90, Vector3.forward);
 			}
-		} else if (Mathf.Abs(d.x) > 0) {
-			meleeFlash.localRotation = Quaternion.AngleAxis(0, Vector3.forward);
-			// left/right
-			if (d.x < 0 || d.x == 0 && movement.direction < 0) {
-				//meleeFlash.position = transform.position - new Vector3(meleeOffset.x, meleeOffset.y);
+		} else {
+			if (movement.direction < 0) {
+				meleeFlash.position = transform.position - new Vector3(meleeOffset.x, meleeOffset.y);
 			} else {
 				//meleeFlash.position = transform.position + new Vector3(meleeOffset.x, meleeOffset.y);
 			}

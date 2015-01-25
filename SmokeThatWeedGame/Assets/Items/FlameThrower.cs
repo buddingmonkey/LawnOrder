@@ -5,6 +5,7 @@ public class FlameThrower : Holdable {
 
 	// Use this for initialization
 	void Start () {
+		base.Start ();
 	}
 	
 	public override void GetHeld(CharacterMovement newHolder){

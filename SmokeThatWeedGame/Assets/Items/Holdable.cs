@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Holdable : MonoBehaviour {
@@ -11,11 +11,13 @@ public class Holdable : MonoBehaviour {
 	protected WeaponSpawner mySpawner;
 	public int bulletID = 0;
 	private bool discarded;
-	public float destructTime = 2f;
+	public float destructTime = 5f;
+	private float destructCountdown;
 
+	Collider2D triggerCollider;
 	// Use this for initialization
-	void Start () {
-	
+	public void Start () {
+		triggerCollider = gameObject.GetComponentInChildren<Collider2D> ();
 	}
 
 	public void RememberSpawner(WeaponSpawner spawner)
@@ -31,8 +33,8 @@ public class Holdable : MonoBehaviour {
 			{
 				if(discarded)
 				{
-					coolDownTimer-=Time.deltaTime;
-					if(coolDownTimer<0)
+					destructCountdown-=Time.deltaTime;
+					if(destructCountdown<0)
 					{
 						Destroy (gameObject);
 					}
@@ -47,18 +49,15 @@ public class Holdable : MonoBehaviour {
 			}
 			else
 			{
-				//collider2D.enabled = true;
 				canBeHeld = true;
-				coolDownTimer = destructTime;
+				destructCountdown = destructTime;
 			}
-			
-			return;
-		}
-		
-		if(coolDownTimer>0f)//cool down action time when being held
-		{
-			coolDownTimer-=Time.deltaTime;
-			return;
+		} else {
+			if(coolDownTimer>0f)//cool down action time when being held
+			{
+				coolDownTimer-=Time.deltaTime;
+				return;
+			}
 		}
 	}
 
@@ -77,6 +76,7 @@ public class Holdable : MonoBehaviour {
 		transform.SetParent(newHolder.transform);
 		transform.localPosition = Vector3.zero - Vector3.forward;
 		//if (collider != null)
+		triggerCollider.enabled = false;
 		collider2D.enabled = false;
 		rigidbody2D.isKinematic = true;
 	}
@@ -93,11 +93,12 @@ public class Holdable : MonoBehaviour {
 		rigidbody2D.velocity = impulse * dropSpeed;
 		rigidbody2D.isKinematic = false;
 		collider2D.enabled = true;
-		//collider2D.enabled = true;
+		triggerCollider.enabled = true;
 		discarded = true;
+		destructCountdown = destructTime;
 	}
 	
-	void OnCollisionEnter2D(Collision2D coll) {
+	void OnTriggerStay2D(Collider2D coll) {
 		if(beingHeld || coolDownTimer>0)
 		{
 			return;
