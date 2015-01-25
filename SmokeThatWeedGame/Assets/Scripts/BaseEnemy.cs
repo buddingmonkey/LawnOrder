@@ -13,7 +13,8 @@ public class BaseEnemy : MonoBehaviour {
 	public float terminalVelocity;
 	public enum Type {
 		Flower,
-		HedgeHog
+		HedgeHog,
+		CrabGrass
 	};
 	public Type EnemyType;
 
@@ -65,12 +66,17 @@ public class BaseEnemy : MonoBehaviour {
 		if (stage >= movementStage && timeSinceDamaged > 1f) {
 			if (EnemyType == Type.HedgeHog) {
 				HedgeMove();
+			} else if (EnemyType == Type.CrabGrass) {
+				animator.SetBool("Walking", true);
+				Move ();
 			} else {
 				Move ();
 			}
 		} else {
 			if (EnemyType == Type.HedgeHog) {
 				HedgeStop();
+			} else if (EnemyType == Type.CrabGrass) {
+				animator.SetBool("Walking", false);
 			} else {
 			}
 		}
