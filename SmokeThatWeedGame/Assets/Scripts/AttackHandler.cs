@@ -22,6 +22,7 @@ public class AttackHandler : MonoBehaviour {
 			}
 
 			if (stopAfterHit) {
+				if (this.tag == "Melee") return;
 				Destroy (gameObject);
 			}
 		}

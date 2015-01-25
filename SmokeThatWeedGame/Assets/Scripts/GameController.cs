@@ -19,6 +19,8 @@ public class GameController : MonoBehaviour {
 		GameOver
 	}
 
+	public string[] levels;
+
 	public static GameState state;
 	public static int[] score = new int[4];
 
@@ -127,5 +129,13 @@ public class GameController : MonoBehaviour {
 		currentPlayers[playerNum] = player;
 		player.name = "Player" + playerNum;
 		player.SetParent(spawners[playerNum]);
+	}
+
+	public void PlayAgain() {
+		if (levels.Length > 0) {
+			Application.LoadLevel (levels[Random.Range(0, levels.Length)]);
+		} else {
+			Application.LoadLevel (Application.loadedLevel);
+		}
 	}
 }
