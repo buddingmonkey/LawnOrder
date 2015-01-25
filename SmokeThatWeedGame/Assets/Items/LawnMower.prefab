@@ -13,7 +13,7 @@ GameObject:
   - 58: {fileID: 5800000}
   - 50: {fileID: 5000000}
   m_Layer: 0
-  m_Name: SprayBottle
+  m_Name: LawnMower
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: .51219511
+  m_Radius: .35801363
   m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -57,11 +57,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeHeld: 1
-  beingHeld: 0
   holder: {fileID: 0}
   droppedCoolDown: 1
   dropSpeed: 10
   bulletID: 0
+  destructTime: 5
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300090, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 055117293890e4dd0aeb706c614ca6ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!224 &22400000
 RectTransform:
@@ -92,13 +92,13 @@ RectTransform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -.100000001}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -25.1690006, y: -15.9650002}
+  m_AnchoredPosition: {x: -20.0451508, y: -10.6544762}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000
