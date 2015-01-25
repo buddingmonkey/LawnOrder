@@ -128,4 +128,8 @@ public class GameController : MonoBehaviour {
 		player.name = "Player" + playerNum;
 		player.SetParent(spawners[playerNum]);
 	}
+
+	public void PlayAgain() {
+		Application.LoadLevel (Application.loadedLevel);
+	}
 }
