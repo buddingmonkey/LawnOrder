@@ -123,6 +123,9 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void SpawnPlayer(int playerNum){
+		if (spawners.Length == 0 || spawners[playerNum] == null) 
+			return;
+
 		Transform player = (Transform) Instantiate(playerPrefab);
 		player.position = spawners[playerNum].position;
 		player.GetComponent<CharacterMovement>().playerNum = playerNum;
