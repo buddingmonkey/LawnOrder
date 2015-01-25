@@ -134,7 +134,9 @@ public class CharacterMovement : MonoBehaviour {
 		} else if (rigidbody.velocity.x > 0) {
 			direction = 1;
 		}
-		transform.localScale = new Vector3(direction, 1, 1);
+		if (dir != 0) {
+			transform.localScale = new Vector3 (Mathf.Sign (dir), 1, 1);
+		}
 		animator.SetFloat ("speed",Mathf.Abs (vx));
 	}
 

@@ -3,12 +3,13 @@ using System.Collections;
 
 public class EnemySpawner : MonoBehaviour {
 
+	public Transform enemyPrefab;
 	public float spawnFrequency = 3f;
 	public float spawnDelay = 1f;
 	public bool randomStart = false;
 	float timeSinceSpawn = 0;
 
-	public static int maxEnemyCount = 5;
+	public static int maxEnemyCount = 30;
 	public static int currentEnemyCount = 0;
 
 	public enum Direction {
@@ -41,8 +42,8 @@ public class EnemySpawner : MonoBehaviour {
 			return;
 
 		currentEnemyCount++;
-		GameObject enemy = (GameObject) Instantiate(GameController.Instance.enemyPrefab);
-		enemy.transform.position = transform.position;
+		Transform enemy = (Transform) Instantiate(enemyPrefab == null ? GameController.Instance.enemyPrefabs[Random.Range(0, GameController.Instance.enemyPrefabs.Length)] : enemyPrefab);
+		enemy.position = transform.position;
 		var baseEnemy = enemy.GetComponent<BaseEnemy> ();
 		switch (direction) {
 		case Direction.Left:
