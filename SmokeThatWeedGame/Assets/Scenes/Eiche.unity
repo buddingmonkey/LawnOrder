@@ -4068,11 +4068,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeHeld: 1
-  beingHeld: 0
   holder: {fileID: 0}
   droppedCoolDown: 1
   dropSpeed: 10
   bulletID: 1
+  destructTime: 5
 --- !u!50 &410681142
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -8673,6 +8673,57 @@ MonoBehaviour:
   right: {fileID: 398701012}
   top: {fileID: 744881193}
   bottom: {fileID: 1494853384}
+--- !u!1 &1310454696
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 138556, guid: 48293c12e4c524775b8c772256f33784, type: 2}
+  m_PrefabInternal: {fileID: 1274078874}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1310454697}
+  - 114: {fileID: 1310454698}
+  m_Layer: 0
+  m_Name: SfxManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1310454697
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 438556, guid: 48293c12e4c524775b8c772256f33784, type: 2}
+  m_PrefabInternal: {fileID: 1274078874}
+  m_GameObject: {fileID: 1310454696}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -745.224548, y: -332.496063, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1605330224}
+  m_RootOrder: 0
+--- !u!114 &1310454698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11438556, guid: 48293c12e4c524775b8c772256f33784,
+    type: 2}
+  m_PrefabInternal: {fileID: 1274078874}
+  m_GameObject: {fileID: 1310454696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d9d62ca78bbc4ac7b1cced09c8dec44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - name: Jump
+    clip: {fileID: 0}
+  - name: Fire
+    clip: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 0}
 --- !u!1 &1329168925
 GameObject:
   m_ObjectHideFlags: 0
@@ -10182,7 +10233,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1605330224}
   - 114: {fileID: 1605330223}
-  - 114: {fileID: 1605330225}
   - 114: {fileID: 1605330226}
   m_Layer: 0
   m_Name: GameController
@@ -10211,7 +10261,7 @@ MonoBehaviour:
   - {fileID: 563323957}
   screenManager: {fileID: 1605330226}
   playerPrefab: {fileID: 22418602, guid: 7e6c59a726f614ac99dcd592f8586521, type: 2}
-  roundLength: 180
+  roundLength: 90
 --- !u!4 &1605330224
 Transform:
   m_ObjectHideFlags: 0
@@ -10221,25 +10271,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 712.865417, y: 323.335724, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1310454697}
   m_Father: {fileID: 0}
   m_RootOrder: 6
---- !u!114 &1605330225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11438308, guid: 48293c12e4c524775b8c772256f33784,
-    type: 2}
-  m_PrefabInternal: {fileID: 1274078874}
-  m_GameObject: {fileID: 1605330222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnFrequency: 3
-  spawnDelay: 1
-  randomStart: 0
-  direction: 0
 --- !u!114 &1605330226
 MonoBehaviour:
   m_ObjectHideFlags: 0
