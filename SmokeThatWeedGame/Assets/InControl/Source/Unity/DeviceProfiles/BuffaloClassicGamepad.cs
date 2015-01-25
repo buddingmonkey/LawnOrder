@@ -6,7 +6,7 @@ namespace InControl{
 	public class BuffaloClassicGamepad : UnityInputDeviceProfile {
 		public BuffaloClassicGamepad()
 		{
-			Name = " USB,2-axis 8-button gamepad";
+			Name = "USB,2-axis 8-button gamepad ";
 			Meta = "Buffalo Classic Gamepad on Mac";
 			
 			SupportedPlatforms = new[] {
@@ -16,7 +16,7 @@ namespace InControl{
 			};
 			
 			JoystickNames = new[] {
-				" USB,2-axis 8-button gamepad"
+				"USB,2-axis 8-button gamepad "
 			};
 			
 			ButtonMappings = new[] {
