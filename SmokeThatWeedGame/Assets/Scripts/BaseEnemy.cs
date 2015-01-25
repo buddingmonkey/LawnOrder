@@ -94,6 +94,9 @@ public class BaseEnemy : MonoBehaviour {
 		EnemySpawner.currentEnemyCount--;
 
 		Destroy (gameObject);
+		string[] deathSounds = new string[3] {"PlantDeath","PlantDeath2","PlantDeath3"};
+		int deathIndex = Random.Range(0, deathSounds.Length);
+		SfxManager.Instance.PlaySoundAt (deathSounds[deathIndex], transform.position);
 	}
 
 	public void Move() {
