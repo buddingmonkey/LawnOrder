@@ -89,7 +89,7 @@ public class Holdable : MonoBehaviour {
 		beingHeld = false;
 		attack.holdItem = null;
 		holder = null;
-		transform.parent = null;
+		transform.SetParent(null);
 		rigidbody2D.velocity = impulse * dropSpeed;
 		rigidbody2D.isKinematic = false;
 		collider2D.enabled = true;

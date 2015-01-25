@@ -109,6 +109,7 @@ public class WeaponSpawner : MonoBehaviour {
 		grabbed = true;
 		theSprite.enabled = true;
 		GameController.activeProjectile = s.projectiles[weaponInSight].name;
+		GameController.activeWeaponText = s.weaponNames[weaponInSight];
 	}
 
 	private void ChooseRandomWeapon()

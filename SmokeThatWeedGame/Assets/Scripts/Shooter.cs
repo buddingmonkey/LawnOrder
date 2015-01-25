@@ -4,6 +4,7 @@ using System.Collections;
 public class Shooter : MonoBehaviour {
 	public Transform currentProjectile;
 	public Transform[] projectiles;
+	public string[] weaponNames;
 	public InputControls inputControls;
 
 	public bool autoFire = true;
