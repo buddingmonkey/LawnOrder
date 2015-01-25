@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Holdable : MonoBehaviour {
 	public bool canBeHeld = true;
-	public bool beingHeld;
+	private bool beingHeld;
 	public CharacterMovement holder;
 	public float droppedCoolDown = 1f;
 	public float dropSpeed = 10f;
@@ -92,7 +92,7 @@ public class Holdable : MonoBehaviour {
 		CharacterMovement theCharacter = coll.gameObject.GetComponent<CharacterMovement> ();
 		if (theCharacter != null)
 		{
-			if(!theCharacter.GetComponent<PlayerAttack>().holdItem != null)
+			if(theCharacter.GetComponent<PlayerAttack>().holdItem == null)
 			{
 				Debug.Log ("grabbed by "+theCharacter.gameObject.name);
 				GetHeld (theCharacter);

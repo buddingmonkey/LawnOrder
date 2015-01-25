@@ -64,7 +64,7 @@ MonoBehaviour:
   - {fileID: 0}
   screenManager: {fileID: 11499398}
   playerPrefab: {fileID: 22418602, guid: 7e6c59a726f614ac99dcd592f8586521, type: 2}
-  roundLength: 180
+  roundLength: 90
 --- !u!114 &11499398
 MonoBehaviour:
   m_ObjectHideFlags: 1

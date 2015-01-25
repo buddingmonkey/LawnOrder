@@ -13,7 +13,7 @@ public class BaseEnemy : MonoBehaviour {
 
 	public int points = 100;
 
-	public int colliderMask = ~0x400;
+	int colliderMask = ~0x400;
 
 	float timeInStage;
 	int stage;
@@ -23,9 +23,7 @@ public class BaseEnemy : MonoBehaviour {
 
 	float health;
 	public float direction;
-	float width;
 	float halfWidth;
-	float height;
 	float halfHeight;
 	float timeSinceDamaged = 0;
 
@@ -41,9 +39,7 @@ public class BaseEnemy : MonoBehaviour {
 		health = startingHealth;
 		transform = GetComponent<RectTransform> ();
 		direction = -1;
-		width = transform.rect.width;
 		halfWidth = transform.rect.width / 2;
-		height = transform.rect.width;
 		halfHeight = transform.rect.width / 2;
 		speed *= Random.Range (0.9f, 1.1f);
 	}
@@ -92,20 +88,16 @@ public class BaseEnemy : MonoBehaviour {
 	public void Move() {
 		rigidbody.velocity = Vector2.Lerp (rigidbody.velocity, new Vector2 (direction * speed,rigidbody.velocity.y), 0.9f);
 
-		Vector2 position = new Vector2 (transform.position.x, transform.position.y - halfHeight);
+		Vector2 position = new Vector2 (transform.position.x, transform.position.y + halfHeight);
 		Vector2 moveTo = position + rigidbody.velocity * Time.deltaTime + direction*Vector2.right * halfWidth;
 
 		transform.localScale = new Vector3(direction, 1, 1);
-		//if((direction<0 && transform.rect.width>0) || (direction>0 && transform.rect.width<0))
-		//{
-			//transform.rect.width*=-1f;	
-			//transform.rect = new Rect(transform.rect.x,transform.rect.y,transform.rect.width,transform.rect.height);
-		//}
 
 
-//		Debug.DrawRay(moveTo, -Vector3.up*.5f, Color.green);
-		RaycastHit2D hit = Physics2D.Raycast(moveTo, -Vector2.up, .5f, colliderMask);
-		if (hit.collider == null) {
+//		Debug.DrawRay(moveTo, Vector2.right * direction * 0.5f, Color.green);
+		// ignore hit on player
+		RaycastHit2D hit = Physics2D.Raycast(moveTo, Vector2.right * direction, .25f, colliderMask & ~(0xF << 10));
+		if (hit.collider != null) {
 //			Debug.DrawRay(moveTo,-Vector3.up*.5f,Color.red);
 			// hit edge, turn around
 			direction = -direction;
