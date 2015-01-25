@@ -28,9 +28,12 @@ public class BaseEnemy : MonoBehaviour {
 	float height;
 	float halfHeight;
 	float timeSinceDamaged = 0;
+
+	private Animator animator;
 	
 	// Use this for initialization
 	void Start () {
+		animator = GetComponent<Animator> ();
 		stage = 0;
 		timeInStage = 0;
 		spriteRenderer = GetComponent<SpriteRenderer> ();
@@ -51,7 +54,8 @@ public class BaseEnemy : MonoBehaviour {
 		if (timeInStage > growthRateSec && stage < stages.Length-1) {
 			stage++;
 			timeInStage = 0;
-			spriteRenderer.sprite = stages[stage];
+			//spriteRenderer.sprite = stages[stage];
+			animator.SetInteger("maturity",stage);
 		}
 		timeSinceDamaged += Time.deltaTime;
 
@@ -90,12 +94,22 @@ public class BaseEnemy : MonoBehaviour {
 
 		Vector2 position = new Vector2 (transform.position.x, transform.position.y - halfHeight);
 		Vector2 moveTo = position + rigidbody.velocity * Time.deltaTime + direction*Vector2.right * halfWidth;
+
+		transform.localScale = new Vector3(direction, 1, 1);
+		//if((direction<0 && transform.rect.width>0) || (direction>0 && transform.rect.width<0))
+		//{
+			//transform.rect.width*=-1f;	
+			//transform.rect = new Rect(transform.rect.x,transform.rect.y,transform.rect.width,transform.rect.height);
+		//}
+
+
 //		Debug.DrawRay(moveTo, -Vector3.up*.5f, Color.green);
 		RaycastHit2D hit = Physics2D.Raycast(moveTo, -Vector2.up, .5f, colliderMask);
 		if (hit.collider == null) {
 //			Debug.DrawRay(moveTo,-Vector3.up*.5f,Color.red);
 			// hit edge, turn around
 			direction = -direction;
+
 			rigidbody.velocity = new Vector2(direction * Mathf.Abs(rigidbody.velocity.x), rigidbody.velocity.y);
 		}
 
