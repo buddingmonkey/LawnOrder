@@ -32,6 +32,7 @@ public class EnemySpawner : MonoBehaviour {
 	}
 
 	void Spawn() {
+		Debug.Log("Spawning Enemy: " + Time.timeSinceLevelLoad);
 		GameObject enemy = (GameObject) Instantiate(GameController.Instance.enemyPrefab);
 		enemy.transform.position = transform.position;
 		var baseEnemy = enemy.GetComponent<BaseEnemy> ();

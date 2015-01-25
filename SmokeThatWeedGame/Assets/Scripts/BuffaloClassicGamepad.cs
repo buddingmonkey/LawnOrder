@@ -6,7 +6,7 @@ public class BuffaloClassicGamepad : UnityInputDeviceProfile {
 	
 	public BuffaloClassicGamepad()
 	{
-		Name = " USB,2-axis 8-button gamepad";
+		Name = "Unknown Device ( USB,2-axis 8-button gamepad)";
 		Meta = "Buffalo Classic Gamepad on Mac";
 		
 		SupportedPlatforms = new[] {
@@ -14,7 +14,7 @@ public class BuffaloClassicGamepad : UnityInputDeviceProfile {
 		};
 		
 		JoystickNames = new[] {
-			" USB,2-axis 8-button gamepad"
+			"Unknown Device ( USB,2-axis 8-button gamepad)"
 		};
 		
 		ButtonMappings = new[] {
@@ -71,7 +71,7 @@ public class BuffaloClassicGamepad : UnityInputDeviceProfile {
 		};
 		
 		AnalogMappings = new[] {
-			new InputControlMapping {
+			/*new InputControlMapping {
 				Handle = "Left Stick X",
 				Target = InputControlType.LeftStickX,
 				Source = Analog0
@@ -81,7 +81,7 @@ public class BuffaloClassicGamepad : UnityInputDeviceProfile {
 				Target = InputControlType.LeftStickY,
 				Source = Analog1,
 				Invert = true
-			},
+			},*/
 			new InputControlMapping {
 				Handle = "DPad Left",
 				Target = InputControlType.DPadLeft,
