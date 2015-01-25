@@ -661,6 +661,8 @@ MonoBehaviour:
   weaponPrefabs:
   - {fileID: 100000, guid: 4722596b884fd40a19b38fd0d5514a06, type: 2}
   - {fileID: 172852, guid: daac945563b1f4fc88d206def3ce7957, type: 2}
+  - {fileID: 127724, guid: 7499131f57b0041959da5b6ab6e7b176, type: 2}
+  - {fileID: 196388, guid: 77cc16d4ea19d4c51b136d644769fabc, type: 2}
   tickTockPrefab: {fileID: 179530, guid: c4c3986cc74714773a5b9486d7e9467d, type: 2}
   grabbed: 1
 --- !u!212 &100307805
@@ -9391,6 +9393,18 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: f38bff31181193d489c39eabcaefa8d6, type: 3}
   - name: Shoot
     clip: {fileID: 8300000, guid: 7c0be5c37b4ff92479532eaa855e6b91, type: 3}
+  - name: PlantDeath
+    clip: {fileID: 8300000, guid: bdcaec91d9d90a64bad0969629434899, type: 3}
+  - name: PlantDeath2
+    clip: {fileID: 8300000, guid: 13bb520487841d74bb9510f0284f783a, type: 3}
+  - name: PlantDeath3
+    clip: {fileID: 8300000, guid: 27e2cc02bfe20ec41ac536eed499e322, type: 3}
+  - name: AnnounceFlamethrower
+    clip: {fileID: 8300000, guid: 90c7efb1ff626984eb08c63c0e8c508a, type: 3}
+  - name: AnnounceLawnmower
+    clip: {fileID: 8300000, guid: 2ca9cbb95b665d04abd814d51eba1dd3, type: 3}
+  - name: AnnounceRainmaker
+    clip: {fileID: 8300000, guid: 2df0d79a7b1e65f49a746614b97789ba, type: 3}
 --- !u!4 &1349248688
 Transform:
   m_ObjectHideFlags: 0
@@ -10578,6 +10592,50 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300248, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1520050673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1520050675}
+  - 114: {fileID: 1520050674}
+  m_Layer: 0
+  m_Name: EnemySpawn
+  m_TagString: Enemy Spawn
+  m_Icon: {fileID: -215833656, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1520050674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1520050673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 0}
+  spawnFrequency: 2
+  spawnDelay: 1
+  randomStart: 0
+  direction: 0
+--- !u!4 &1520050675
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1520050673}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -23.75, y: -10, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
 --- !u!1 &1522473434
 GameObject:
   m_ObjectHideFlags: 0
@@ -10790,7 +10848,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 239e1a968e7ee7e46811aed65c166627, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .430000007
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10996,6 +11054,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1563260690}
+  - 114: {fileID: 1563260691}
   m_Layer: 0
   m_Name: EnemySpawn
   m_TagString: Enemy Spawn
@@ -11015,6 +11074,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+--- !u!114 &1563260691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1563260689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 0}
+  spawnFrequency: 2
+  spawnDelay: 1
+  randomStart: 0
+  direction: 0
 --- !u!1 &1596181172
 GameObject:
   m_ObjectHideFlags: 0
@@ -11275,7 +11350,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f68218a1d03247f7bb40a38a478cec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 169986, guid: 2d1ad2580ebaf460a927e0e701c71f35, type: 2}
+  levels:
+  - Avi_King_Of_The_Pit
+  - Avi_Wee_Devils
+  - Avi_Weeping_Alien
+  - Ricky_Roman_Garden
+  enemyPrefabs:
+  - {fileID: 22405920, guid: 13289e9eb77944df4bd2037349b01743, type: 2}
+  - {fileID: 22405920, guid: 2d1ad2580ebaf460a927e0e701c71f35, type: 2}
+  - {fileID: 22405920, guid: 3f010843bc6874a2cb054368f88cd93b, type: 2}
   spawners:
   - {fileID: 1155801021}
   - {fileID: 1255205842}
@@ -12323,7 +12406,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnFrequency: 3
+  enemyPrefab: {fileID: 0}
+  spawnFrequency: 2
   spawnDelay: 1
   randomStart: 0
   direction: 1
@@ -13815,6 +13899,50 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300238, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &2020269361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2020269363}
+  - 114: {fileID: 2020269362}
+  m_Layer: 0
+  m_Name: EnemySpawn
+  m_TagString: Enemy Spawn
+  m_Icon: {fileID: -215833656, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2020269362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2020269361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 0}
+  spawnFrequency: 2
+  spawnDelay: 1
+  randomStart: 0
+  direction: 1
+--- !u!4 &2020269363
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2020269361}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -21.25, y: -10, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
 --- !u!1 &2051318442
 GameObject:
   m_ObjectHideFlags: 0
