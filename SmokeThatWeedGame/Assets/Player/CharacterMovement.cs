@@ -50,6 +50,8 @@ public class CharacterMovement : MonoBehaviour {
 		state = PlayerState.Falling;
 
 		animator = GetComponent<Animator> ();
+
+		animator.SetInteger ("player", playerNum);
 		//if (platformLayer == null)
 		//{
 			platformLayer = LayerMask.NameToLayer ("Platform");
