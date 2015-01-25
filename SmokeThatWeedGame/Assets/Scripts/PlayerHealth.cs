@@ -57,6 +57,7 @@ public class PlayerHealth : MonoBehaviour {
 					// TODO a cool animation or effect
 					int pNum = GetComponent<CharacterMovement>().playerNum;
 					Destroy (gameObject);
+					this.gameObject.SetActive(false);
 					GameController.Instance.SpawnPlayer(pNum);
 				} else {
 					timeHurt = 0;
