@@ -11039,7 +11039,8 @@ MonoBehaviour:
   enableXInput: 0
   useFixedUpdate: 0
   dontDestroyOnLoad: 0
-  customProfiles: []
+  customProfiles:
+  - BuffaloClassicGamepad
 --- !u!4 &1174038555
 Transform:
   m_ObjectHideFlags: 0

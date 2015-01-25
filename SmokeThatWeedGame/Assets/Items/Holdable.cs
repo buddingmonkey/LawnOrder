@@ -11,7 +11,7 @@ public class Holdable : MonoBehaviour {
 	protected WeaponSpawner mySpawner;
 	public int bulletID = 0;
 	private bool discarded;
-	public float destructTime = 5f;
+	public float destructTime = 2f;
 
 	// Use this for initialization
 	void Start () {

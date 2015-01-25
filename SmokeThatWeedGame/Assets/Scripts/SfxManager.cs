@@ -29,6 +29,6 @@ public class SfxManager : MonoBehaviour {
 	}
 
 	public void PlaySoundAt(string name, Vector3 location) {
-		AudioSource.PlayClipAtPoint (audioDict[name], location);
+		//AudioSource.PlayClipAtPoint (audioDict[name], location);
 	}
 }
