@@ -11,6 +11,11 @@ public class BaseEnemy : MonoBehaviour {
 	public float growthRateSec;
 	public float gravity;
 	public float terminalVelocity;
+	public enum Type {
+		Flower,
+		HedgeHog
+	};
+	public Type EnemyType;
 
 	public int points = 100;
 
@@ -58,7 +63,16 @@ public class BaseEnemy : MonoBehaviour {
 		timeSinceDamaged += Time.deltaTime;
 
 		if (stage >= movementStage && timeSinceDamaged > 1f) {
-			Move ();
+			if (EnemyType == Type.HedgeHog) {
+				HedgeMove();
+			} else {
+				Move ();
+			}
+		} else {
+			if (EnemyType == Type.HedgeHog) {
+				HedgeStop();
+			} else {
+			}
 		}
 
 		ApplyGravity ();
@@ -99,7 +113,7 @@ public class BaseEnemy : MonoBehaviour {
 		SfxManager.Instance.PlaySoundAt (deathSounds[deathIndex], transform.position);
 	}
 
-	public void Move() {
+	private void Move() {
 		rigidbody.velocity = Vector2.Lerp (rigidbody.velocity, new Vector2 (direction * speed,rigidbody.velocity.y), 0.9f);
 
 		Vector2 position = new Vector2 (transform.position.x, transform.position.y + halfHeight);
@@ -120,5 +134,47 @@ public class BaseEnemy : MonoBehaviour {
 		}
 
 	}
+
+	private float timeSinceStop = 1;
+	private void HedgeMove() {
+		if (timeSinceStop > 2.5f && Random.Range (0, 120) == 0) {
+			timeSinceStop = 0;
+			animator.SetBool("Walking", false);
+		}
+		timeSinceStop += Time.deltaTime;
+		if (timeSinceStop > .2f && timeSinceStop < 1.5f) {
+			animator.SetBool("Peeking", true);
+			return;
+		} else if (timeSinceStop <= 1) {
+			return;
+		}
+		animator.SetBool ("Walking", true);
+		animator.SetBool ("Peeking", false);
+		rigidbody.velocity = Vector2.Lerp (rigidbody.velocity, new Vector2 (direction * speed,rigidbody.velocity.y), 0.9f);
+		
+		Vector2 position = new Vector2 (transform.position.x, transform.position.y + halfHeight);
+		Vector2 moveTo = position + rigidbody.velocity * Time.deltaTime + direction*Vector2.right * halfWidth;
+		
+		transform.localScale = new Vector3(direction, 1, 1);
+		
+		
+		//		Debug.DrawRay(moveTo, Vector2.right * direction * 0.5f, Color.green);
+		// ignore hit on player
+		RaycastHit2D hit = Physics2D.Raycast(moveTo, Vector2.right * direction, .25f, colliderMask & ~(0xF << 10));
+		if (hit.collider != null) {
+			//			Debug.DrawRay(moveTo,-Vector3.up*.5f,Color.red);
+			// hit edge, turn around
+			direction = -direction;
+			
+			rigidbody.velocity = new Vector2(direction * Mathf.Abs(rigidbody.velocity.x), rigidbody.velocity.y);
+		}
+		
+	}
+
+	private void HedgeStop() {
+		animator.SetBool ("Walking", false);
+		animator.SetBool ("Peeking", false);
+	}
+
 
 }

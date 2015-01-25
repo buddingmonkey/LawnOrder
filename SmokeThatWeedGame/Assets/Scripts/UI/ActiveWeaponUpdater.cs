@@ -14,8 +14,24 @@ public class ActiveWeaponUpdater : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (oldWeapon != GameController.activeProjectile) {
-			uiText.text = GameController.activeWeaponText;
+			uiText.text = GameController.activeProjectile;
 			oldWeapon = GameController.activeProjectile;
+			switch (GameController.activeProjectile) {
+			case "Flame Thrower":
+				SfxManager.Instance.PlaySound("AnnounceFlamethrower");
+				break;
+			case "Flame":
+				SfxManager.Instance.PlaySound("AnnounceFlamethrower");
+				break;
+			case "Lawn Mower":
+				SfxManager.Instance.PlaySound("AnnounceLawnmower");
+				break;
+			case "Bullet":
+				SfxManager.Instance.PlaySound("AnnounceRainmaker");
+				break;
+			}
+
+
 		}
 	}
 

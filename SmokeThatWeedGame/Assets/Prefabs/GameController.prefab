@@ -169,6 +169,12 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 13bb520487841d74bb9510f0284f783a, type: 3}
   - name: PlantDeath3
     clip: {fileID: 8300000, guid: 27e2cc02bfe20ec41ac536eed499e322, type: 3}
+  - name: AnnounceFlamethrower
+    clip: {fileID: 8300000, guid: 90c7efb1ff626984eb08c63c0e8c508a, type: 3}
+  - name: AnnounceLawnmower
+    clip: {fileID: 8300000, guid: 2ca9cbb95b665d04abd814d51eba1dd3, type: 3}
+  - name: AnnounceRainmaker
+    clip: {fileID: 8300000, guid: 2df0d79a7b1e65f49a746614b97789ba, type: 3}
 --- !u!114 &11486086
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,7 +218,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f68218a1d03247f7bb40a38a478cec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 169986, guid: 2d1ad2580ebaf460a927e0e701c71f35, type: 2}
+  enemyPrefabs:
+  - {fileID: 22405920, guid: 13289e9eb77944df4bd2037349b01743, type: 2}
+  - {fileID: 22405920, guid: 2d1ad2580ebaf460a927e0e701c71f35, type: 2}
   spawners:
   - {fileID: 0}
   - {fileID: 0}

@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour {
 	public static string activeProjectile = null;
 	public static string activeWeaponText = "None";
 
-	public GameObject enemyPrefab;
+	public Transform[] enemyPrefabs;
 	public Transform[] spawners;
 
 	public ScreenManager screenManager;
