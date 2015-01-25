@@ -91,6 +91,7 @@ public class CharacterMovement : MonoBehaviour {
 				state = PlayerState.Jumping;
 				jumpTime = 0;
 				rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpSpeed);
+				SfxManager.Instance.PlaySoundAt("Jump", trans.position);
 			}
 		} else if (state == PlayerState.Jumping) {
 			jumpTime += Time.deltaTime;

@@ -79,7 +79,7 @@ public class InputControls : MonoBehaviour {
 			return state; 
 		}
 
-		InputControl ctrl = device.GetControl (InputControlType.Action2);
+		InputControl ctrl = device.GetControl (InputControlType.Action3);
 		if (ctrl.IsPressed){
 			if (ctrl.HasChanged){
 				state = ControlState.down;
@@ -96,7 +96,7 @@ public class InputControls : MonoBehaviour {
 			return Input.GetKeyDown (KeyCode.LeftShift); 
 		}
 		
-		InputControl ctrl = device.GetControl (InputControlType.Action3);
+		InputControl ctrl = device.GetControl (InputControlType.Action2);
 		return ctrl.IsPressed && ctrl.HasChanged;
 	}
 }
