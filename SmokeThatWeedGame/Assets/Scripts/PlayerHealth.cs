@@ -8,6 +8,8 @@ public class PlayerHealth : MonoBehaviour {
 	float timeInvinsible = 1;
 	float flashTime;
 	new SpriteRenderer renderer;
+	Material mat;
+	bool flashOn;
 
 	public bool invincible = false;
 
@@ -16,6 +18,8 @@ public class PlayerHealth : MonoBehaviour {
 		renderer = GetComponent<SpriteRenderer> ();
 		health = 5;
 		timeHurt = 0;
+		flashOn = false;
+		mat = renderer.material;
 	}
 	
 	// Update is called once per frame
@@ -23,27 +27,30 @@ public class PlayerHealth : MonoBehaviour {
 		if (timeHurt < timeInvinsible) {
 			timeHurt += Time.deltaTime;
 			flashTime+=Time.deltaTime;
-			if (renderer.enabled) {
+			if (!flashOn) {
 				if (flashTime > 0.1f) {
-					renderer.enabled = false;
+					flashOn = true;
+					mat.SetFloat("_colorOverlay", .9f);
 					flashTime = 0;
 				}
 			} else {
 				if (flashTime > 0.05f) {
-					renderer.enabled = true;
+					flashOn = false;
+					mat.SetFloat("_colorOverlay", 0);
 					flashTime = 0;
 				}
 			}
-		} else if (!renderer.enabled) {
-			renderer.enabled = true;
+		} else if (flashOn) {
+			flashOn = false;
+			mat.SetFloat("_colorOverlay", 0);
 		}
 
 	}
 
 	
-	void OnCollisionEnter2D (Collision2D collision)
+	void OnCollisionStay2D (Collision2D collision)
 	{
-		if (timeHurt > 1 || !invincible) {
+		if (timeHurt > 1 && !invincible) {
 			if (collision.collider.gameObject.CompareTag ("Enemy")) {
 				health -= 1;
 				if (health < 0) {
@@ -54,7 +61,8 @@ public class PlayerHealth : MonoBehaviour {
 				} else {
 					timeHurt = 0;
 					flashTime = 0;
-					renderer.enabled = false;
+					flashOn = true;
+					mat.SetFloat("_colorOverlay", .9f);
 				}
 			}
 		}

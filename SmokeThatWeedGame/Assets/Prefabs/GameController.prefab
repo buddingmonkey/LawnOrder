@@ -43,6 +43,7 @@ GameObject:
   - 4: {fileID: 492392}
   - 114: {fileID: 11492392}
   - 114: {fileID: 11499398}
+  - 114: {fileID: 11492188}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -179,6 +180,21 @@ MonoBehaviour:
   clipIndex: 0
   selectRandom: 1
   playMusic: 1
+--- !u!114 &11492188
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e805bd7b71e444d96b3f4d130a09e9ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolConfigs:
+  - name: PlantBlood
+    system: {fileID: 436250, guid: 9c02eda7065b14ac68dcf4d3326d33b6, type: 2}
+    hardLimit: 50
 --- !u!114 &11492392
 MonoBehaviour:
   m_ObjectHideFlags: 1

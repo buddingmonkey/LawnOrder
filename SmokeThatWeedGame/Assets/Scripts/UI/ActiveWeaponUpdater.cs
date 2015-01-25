@@ -14,7 +14,7 @@ public class ActiveWeaponUpdater : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (oldWeapon != GameController.activeProjectile) {
-			uiText.text = GameController.activeProjectile;
+			uiText.text = GameController.activeWeaponText;
 			oldWeapon = GameController.activeProjectile;
 		}
 	}

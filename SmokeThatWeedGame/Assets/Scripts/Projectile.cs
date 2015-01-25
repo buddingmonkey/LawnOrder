@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Projectile : MonoBehaviour {
@@ -23,8 +23,7 @@ public class Projectile : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		t = this.transform;	
-		SfxManager.Instance.PlaySoundAt("Shoot", t.position);
+		t = this.transform;
 		/*
 		if (path == Path.fall){
 			direction = new Vector2(1f, 0f);
