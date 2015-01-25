@@ -54,7 +54,6 @@ public class PlayerAttack : MonoBehaviour {
 	}
 
 	public void Drop(){
-		Rigidbody2D r = holdItem.GetComponent<Rigidbody2D>();
 		var impulse = this.rigidbody2D.velocity.normalized * 3;
 		holdItem.GetDropped(impulse);
 	}

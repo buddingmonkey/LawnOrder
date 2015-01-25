@@ -23,9 +23,7 @@ public class BaseEnemy : MonoBehaviour {
 
 	float health;
 	public float direction;
-	float width;
 	float halfWidth;
-	float height;
 	float halfHeight;
 	float timeSinceDamaged = 0;
 
@@ -41,9 +39,7 @@ public class BaseEnemy : MonoBehaviour {
 		health = startingHealth;
 		transform = GetComponent<RectTransform> ();
 		direction = -1;
-		width = transform.rect.width;
 		halfWidth = transform.rect.width / 2;
-		height = transform.rect.width;
 		halfHeight = transform.rect.width / 2;
 		speed *= Random.Range (0.9f, 1.1f);
 	}
