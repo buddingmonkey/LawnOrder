@@ -11,6 +11,8 @@ public class PlayerHealth : MonoBehaviour {
 	Material mat;
 	bool flashOn;
 
+	bool isDead = false;
+
 	public bool invincible = false;
 
 	// Use this for initialization
@@ -50,15 +52,15 @@ public class PlayerHealth : MonoBehaviour {
 	
 	void OnCollisionStay2D (Collision2D collision)
 	{
-		if (timeHurt > 1 && !invincible) {
+		if (timeHurt > .33f && !invincible) {
 			if (collision.collider.gameObject.CompareTag ("Enemy")) {
 				health -= 1;
-				if (health < 0) {
+				if (health < 0 && !isDead) {
 					// TODO a cool animation or effect
 					int pNum = GetComponent<CharacterMovement>().playerNum;
 					Destroy (gameObject);
-					this.gameObject.SetActive(false);
 					GameController.Instance.SpawnPlayer(pNum);
+					isDead = true;
 				} else {
 					timeHurt = 0;
 					flashTime = 0;
