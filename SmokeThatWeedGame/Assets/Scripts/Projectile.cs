@@ -55,6 +55,5 @@ public class Projectile : MonoBehaviour {
 		if (other.gameObject != player){
 			Destroy(this.gameObject);
 		}
-
 	}
 }
