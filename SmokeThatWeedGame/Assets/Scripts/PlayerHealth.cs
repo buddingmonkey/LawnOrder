@@ -48,9 +48,9 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	
-	void OnCollisionEnter2D (Collision2D collision)
+	void OnCollisionStay2D (Collision2D collision)
 	{
-		if (timeHurt > 1 || !invincible) {
+		if (timeHurt > 1 && !invincible) {
 			if (collision.collider.gameObject.CompareTag ("Enemy")) {
 				health -= 1;
 				if (health < 0) {
