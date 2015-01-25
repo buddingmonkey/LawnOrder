@@ -25,6 +25,8 @@ public class CharacterMovement : MonoBehaviour {
 	int colliderMask = ~0x100;
 	new Rigidbody2D rigidbody;
 
+	private Animator animator;
+
 	enum PlayerState {
 		Grounded,
 		Jumping,
@@ -46,7 +48,7 @@ public class CharacterMovement : MonoBehaviour {
 		halfWidth = width / 2 * 0.95f;
 		state = PlayerState.Falling;
 
-	
+		animator = GetComponent<Animator> ();
 		//if (platformLayer == null)
 		//{
 			platformLayer = LayerMask.NameToLayer ("Platform");
@@ -128,7 +130,7 @@ public class CharacterMovement : MonoBehaviour {
 			direction = 1;
 		}
 		transform.localScale = new Vector3(direction, 1, 1);
-
+		animator.SetFloat ("speed",Mathf.Abs (vx));
 	}
 
 }
