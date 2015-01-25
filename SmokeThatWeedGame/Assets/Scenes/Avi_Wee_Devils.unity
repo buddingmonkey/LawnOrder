@@ -3183,12 +3183,6 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 13bb520487841d74bb9510f0284f783a, type: 3}
   - name: PlantDeath3
     clip: {fileID: 8300000, guid: 27e2cc02bfe20ec41ac536eed499e322, type: 3}
-  - name: AnnounceFlamethrower
-    clip: {fileID: 8300000, guid: 90c7efb1ff626984eb08c63c0e8c508a, type: 3}
-  - name: AnnounceLawnmower
-    clip: {fileID: 8300000, guid: 2ca9cbb95b665d04abd814d51eba1dd3, type: 3}
-  - name: AnnounceRainmaker
-    clip: {fileID: 8300000, guid: 2df0d79a7b1e65f49a746614b97789ba, type: 3}
 --- !u!1 &213666018
 GameObject:
   m_ObjectHideFlags: 0
@@ -5022,7 +5016,6 @@ MonoBehaviour:
   weaponPrefabs:
   - {fileID: 100000, guid: 4722596b884fd40a19b38fd0d5514a06, type: 2}
   - {fileID: 172852, guid: daac945563b1f4fc88d206def3ce7957, type: 2}
-  - {fileID: 127724, guid: 7499131f57b0041959da5b6ab6e7b176, type: 2}
   tickTockPrefab: {fileID: 179530, guid: c4c3986cc74714773a5b9486d7e9467d, type: 2}
   grabbed: 1
 --- !u!212 &405001470
@@ -8159,6 +8152,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 489892, guid: 25cc84bafc77f4cbc96fbb1cc09db175, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5.90999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 489892, guid: 25cc84bafc77f4cbc96fbb1cc09db175, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .75999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 489894, guid: 25cc84bafc77f4cbc96fbb1cc09db175, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 30.1399994
+      objectReference: {fileID: 0}
+    - target: {fileID: 489894, guid: 25cc84bafc77f4cbc96fbb1cc09db175, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .670000017
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 25cc84bafc77f4cbc96fbb1cc09db175, type: 2}
   m_RootGameObject: {fileID: 962689988}
@@ -8470,7 +8479,6 @@ MonoBehaviour:
   weaponPrefabs:
   - {fileID: 100000, guid: 4722596b884fd40a19b38fd0d5514a06, type: 2}
   - {fileID: 172852, guid: daac945563b1f4fc88d206def3ce7957, type: 2}
-  - {fileID: 127724, guid: 7499131f57b0041959da5b6ab6e7b176, type: 2}
   tickTockPrefab: {fileID: 179530, guid: c4c3986cc74714773a5b9486d7e9467d, type: 2}
   grabbed: 1
 --- !u!212 &1059447841
@@ -8623,7 +8631,6 @@ MonoBehaviour:
   weaponPrefabs:
   - {fileID: 100000, guid: 4722596b884fd40a19b38fd0d5514a06, type: 2}
   - {fileID: 172852, guid: daac945563b1f4fc88d206def3ce7957, type: 2}
-  - {fileID: 127724, guid: 7499131f57b0041959da5b6ab6e7b176, type: 2}
   tickTockPrefab: {fileID: 179530, guid: c4c3986cc74714773a5b9486d7e9467d, type: 2}
   grabbed: 1
 --- !u!212 &1081082361
@@ -11392,7 +11399,7 @@ Transform:
   m_PrefabInternal: {fileID: 1000811728}
   m_GameObject: {fileID: 1509123253}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.1700001, y: .75999999, z: 0}
+  m_LocalPosition: {x: 30.1399994, y: .670000017, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 962689990}
@@ -12015,7 +12022,7 @@ Transform:
   m_PrefabInternal: {fileID: 1000811728}
   m_GameObject: {fileID: 1595545322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.88999987, y: .75999999, z: 0}
+  m_LocalPosition: {x: -5.90999985, y: .75999999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 962689990}
@@ -12212,14 +12219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f68218a1d03247f7bb40a38a478cec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levels:
-  - Avi_King_Of_The_Pit
-  - Avi_Wee_Devils
-  - Avi_Weeping_Alien
-  - Ricky_Roman_Garden
-  enemyPrefabs:
-  - {fileID: 22405920, guid: 13289e9eb77944df4bd2037349b01743, type: 2}
-  - {fileID: 22405920, guid: 2d1ad2580ebaf460a927e0e701c71f35, type: 2}
+  enemyPrefab: {fileID: 169986, guid: 2d1ad2580ebaf460a927e0e701c71f35, type: 2}
   spawners:
   - {fileID: 1155801021}
   - {fileID: 1255205842}
@@ -13286,7 +13286,6 @@ MonoBehaviour:
   weaponPrefabs:
   - {fileID: 100000, guid: 4722596b884fd40a19b38fd0d5514a06, type: 2}
   - {fileID: 172852, guid: daac945563b1f4fc88d206def3ce7957, type: 2}
-  - {fileID: 127724, guid: 7499131f57b0041959da5b6ab6e7b176, type: 2}
   tickTockPrefab: {fileID: 179530, guid: c4c3986cc74714773a5b9486d7e9467d, type: 2}
   grabbed: 1
 --- !u!212 &1723499217
@@ -13647,7 +13646,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 0}
   spawnFrequency: 3
   spawnDelay: 1
   randomStart: 0
@@ -15223,7 +15221,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 0}
   spawnFrequency: 3
   spawnDelay: 1
   randomStart: 0
