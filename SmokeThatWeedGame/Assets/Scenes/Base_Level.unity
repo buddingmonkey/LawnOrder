@@ -155,7 +155,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 4722596b884fd40a19b38fd0d5514a06, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4722596b884fd40a19b38fd0d5514a06, type: 2}
@@ -3646,7 +3646,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300230, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
+  m_Sprite: {fileID: 21300090, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &315261439
 MonoBehaviour:
@@ -4160,7 +4160,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: 4722596b884fd40a19b38fd0d5514a06, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4722596b884fd40a19b38fd0d5514a06, type: 2}
@@ -5480,7 +5480,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300230, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
+  m_Sprite: {fileID: 21300090, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &732462664
 MonoBehaviour:
@@ -8888,7 +8888,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300230, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
+  m_Sprite: {fileID: 21300090, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1461284391
 MonoBehaviour:
@@ -9622,7 +9622,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300230, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
+  m_Sprite: {fileID: 21300090, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1607002332
 MonoBehaviour:
@@ -9728,7 +9728,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300230, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
+  m_Sprite: {fileID: 21300090, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1613456943
 MonoBehaviour:

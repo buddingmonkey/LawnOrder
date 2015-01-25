@@ -7,6 +7,12 @@ public class EnemySpawner : MonoBehaviour {
 	public float spawnDelay = 1f;
 	public bool randomStart = false;
 	float timeSinceSpawn = 0;
+	public enum Direction {
+		Left,
+		Right,
+		Random
+	}
+	public Direction direction;
 
 	// Use this for initialization
 	void Start () {
@@ -28,5 +34,17 @@ public class EnemySpawner : MonoBehaviour {
 	void Spawn() {
 		GameObject enemy = (GameObject) Instantiate(GameController.Instance.enemyPrefab);
 		enemy.transform.position = transform.position;
+		var baseEnemy = enemy.GetComponent<BaseEnemy> ();
+		switch (direction) {
+		case Direction.Left:
+			baseEnemy.direction = -1;
+			break;
+		case Direction.Right:
+			baseEnemy.direction = 1;
+			break;
+		default:
+			baseEnemy.direction = Random.Range(0,2) == 0 ? -1 : 1;
+			break;
+		}
 	}
 }

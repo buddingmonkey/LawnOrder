@@ -17,6 +17,7 @@ public class Bounds : MonoBehaviour {
 	}
 
 	public void OnTriggerStay2D(Collider2D other) {
+		Debug.Log ("TRIGGERED");
 		if (other.tag == "Player" || other.tag == "Weapon"){
 			foreach (Collider2D c in colliders){
 				List<Collider2D> contains = new List<Collider2D>(Physics2D.OverlapAreaAll(c.bounds.max, c.bounds.min));
