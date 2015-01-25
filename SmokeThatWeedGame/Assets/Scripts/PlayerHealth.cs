@@ -5,9 +5,11 @@ public class PlayerHealth : MonoBehaviour {
 	public float startingHealth = 5;
 	float health;
 	float timeHurt = 0;
-	float timeInvisible = 1;
+	float timeInvinsible = 1;
 	float flashTime;
 	new SpriteRenderer renderer;
+
+	public bool invincible = false;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +20,7 @@ public class PlayerHealth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (timeHurt < 1) {
+		if (timeHurt < timeInvinsible) {
 			timeHurt += Time.deltaTime;
 			flashTime+=Time.deltaTime;
 			if (renderer.enabled) {
@@ -41,7 +43,7 @@ public class PlayerHealth : MonoBehaviour {
 	
 	void OnCollisionEnter2D (Collision2D collision)
 	{
-		if (timeHurt > 1) {
+		if (timeHurt > 1 || !invincible) {
 			if (collision.collider.gameObject.CompareTag ("Enemy")) {
 				health -= 1;
 				if (health < 0) {

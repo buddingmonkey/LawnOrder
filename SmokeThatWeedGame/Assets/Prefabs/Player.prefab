@@ -15,7 +15,6 @@ GameObject:
   - 50: {fileID: 5018602}
   - 58: {fileID: 5818602}
   - 114: {fileID: 11418602}
-  - 114: {fileID: 11415140}
   - 114: {fileID: 11455140}
   - 114: {fileID: 11484768}
   m_Layer: 8
@@ -134,18 +133,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11415140
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 118600}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 488f50f08a4904b429e12e45af534953, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerNum: 0
 --- !u!114 &11418598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -172,7 +159,7 @@ MonoBehaviour:
   gravity: 50
   terminalVelocity: 50
   maxSpeed: 10
-  jumpSpeed: 8
+  jumpSpeed: 10
   maxAcceleration: .899999976
   maxJumpDuration: .25
   strikeCoolDown: .400000006
@@ -210,6 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 5
+  invincible: 0
 --- !u!114 &11466776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -221,9 +209,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7044199f14f445f6addd0027970a084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 3
   player: {fileID: 11418600}
   stopAfterHit: 0
+  health: {fileID: 11455140}
 --- !u!114 &11484768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -242,6 +231,7 @@ MonoBehaviour:
   front: {fileID: 418602}
   inputControls: {fileID: 11418598}
   shooter: {fileID: 11418602}
+  health: {fileID: 11455140}
 --- !u!212 &21218602
 SpriteRenderer:
   m_ObjectHideFlags: 1

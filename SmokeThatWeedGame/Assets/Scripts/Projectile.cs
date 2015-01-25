@@ -24,6 +24,7 @@ public class Projectile : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		t = this.transform;	
+		SfxManager.Instance.PlaySoundAt("Shoot", t.position);
 		/*
 		if (path == Path.fall){
 			direction = new Vector2(1f, 0f);

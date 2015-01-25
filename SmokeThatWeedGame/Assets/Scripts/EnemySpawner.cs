@@ -7,6 +7,10 @@ public class EnemySpawner : MonoBehaviour {
 	public float spawnDelay = 1f;
 	public bool randomStart = false;
 	float timeSinceSpawn = 0;
+
+	public static int maxEnemyCount = 5;
+	public static int currentEnemyCount = 0;
+
 	public enum Direction {
 		Left,
 		Right,
@@ -32,6 +36,11 @@ public class EnemySpawner : MonoBehaviour {
 	}
 
 	void Spawn() {
+		Debug.Log (currentEnemyCount+" enemies present!!!!");
+		if (currentEnemyCount >= maxEnemyCount)
+			return;
+
+		currentEnemyCount++;
 		GameObject enemy = (GameObject) Instantiate(GameController.Instance.enemyPrefab);
 		enemy.transform.position = transform.position;
 		var baseEnemy = enemy.GetComponent<BaseEnemy> ();
