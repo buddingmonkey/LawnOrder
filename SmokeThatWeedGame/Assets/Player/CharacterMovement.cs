@@ -12,6 +12,7 @@ public class CharacterMovement : MonoBehaviour {
 	public float strikeRange = 1f;
 	public int playerNum;
 	public int direction = 1;
+	public ParticleSystem particles;
 	private InputControls input;
 	private RectTransform trans;
 	private float height;
@@ -80,6 +81,7 @@ public class CharacterMovement : MonoBehaviour {
 				}
 			}
 			if (hit.collider != null) {
+				particles.Stop();
 				state = PlayerState.Grounded;
 				Debug.DrawRay(hit.point,-Vector3.right*.1f,Color.red);
 				trans.position = new Vector2(trans.position.x, hit.point.y + halfHeight);
@@ -89,6 +91,7 @@ public class CharacterMovement : MonoBehaviour {
 		if (state == PlayerState.Grounded) {
 			if (input.IsJumpDown()) {
 				state = PlayerState.Jumping;
+				particles.Play();
 				jumpTime = 0;
 				rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpSpeed);
 				SfxManager.Instance.PlaySoundAt("Jump", trans.position);
