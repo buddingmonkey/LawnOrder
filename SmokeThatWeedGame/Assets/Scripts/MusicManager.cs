@@ -6,10 +6,12 @@ public class MusicManager : MonoBehaviour {
 	public AudioClip [] clips;
 	public int clipIndex = 0;
 	public bool selectRandom = true;
+	public bool playMusic = true;
 	private int x;
 
 	// Use this for initialization
 	void Start () {
+		if (playMusic) {
 		if (selectRandom) {
 			x = Random.Range(0, clips.Length);
 		}
@@ -18,7 +20,7 @@ public class MusicManager : MonoBehaviour {
 		}
 		var audio = GetComponent<AudioSource> ();
 		audio.clip = clips[x];
-		Debug.Log("index:" + x.ToString());
-		audio.Play();
+		audio.Play ();
+		}
 	}
 }
