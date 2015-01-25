@@ -6,7 +6,8 @@ public class Projectile : MonoBehaviour {
 		linear,
 		sine,
 		spread,
-		fall
+		fall,
+		spin
 	}
 
 	public Path path = Path.linear;
@@ -24,11 +25,9 @@ public class Projectile : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		t = this.transform;
-		/*
-		if (path == Path.fall){
-			direction = new Vector2(1f, 0f);
+		if (path == Path.spin){
+			transform.Rotate(new Vector3(0,0, Random.Range(0.0f,360f)), Space.Self);
 		}
-		*/
 	}
 	
 	// Update is called once per frame
@@ -42,6 +41,10 @@ public class Projectile : MonoBehaviour {
 		switch (path){
 		case Path.fall:
 			t.Translate((direction * speed * Time.deltaTime) + (velocity * Time.deltaTime));
+			break;
+		case Path.spin:
+			t.Translate((direction * speed * Time.deltaTime) + (new Vector2(velocity.x, 0) * Time.deltaTime), Space.World);
+			t.Rotate(new Vector3(0,0,360*Time.deltaTime), Space.Self);
 			break;
 		default:
 			t.Translate((direction * speed * Time.deltaTime) + (new Vector2(velocity.x, 0) * Time.deltaTime));
