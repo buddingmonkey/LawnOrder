@@ -218,6 +218,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f68218a1d03247f7bb40a38a478cec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levels:
+  - Avi_King_Of_The_Pit
+  - Avi_Wee_Devils
+  - Avi_Weeping_Alien
+  - Ricky_Roman_Garden
   enemyPrefabs:
   - {fileID: 22405920, guid: 13289e9eb77944df4bd2037349b01743, type: 2}
   - {fileID: 22405920, guid: 2d1ad2580ebaf460a927e0e701c71f35, type: 2}
