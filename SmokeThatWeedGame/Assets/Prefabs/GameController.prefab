@@ -25,7 +25,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 492392}
   - 114: {fileID: 11492392}
-  - 114: {fileID: 11438308}
   - 114: {fileID: 11499398}
   m_Layer: 0
   m_Name: GameController
@@ -59,21 +58,6 @@ Transform:
   - {fileID: 438556}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11438308
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 192392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16515ba4e5f5a40bab2f7c0e64ab8216, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnFrequency: 3
-  spawnDelay: 1
-  randomStart: 0
-  direction: 0
 --- !u!114 &11438556
 MonoBehaviour:
   m_ObjectHideFlags: 1

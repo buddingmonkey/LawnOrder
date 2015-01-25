@@ -10,6 +10,8 @@ public class Holdable : MonoBehaviour {
 	protected float coolDownTimer;
 	protected WeaponSpawner mySpawner;
 	public int bulletID = 0;
+	private bool discarded;
+	public float destructTime = 5f;
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +29,15 @@ public class Holdable : MonoBehaviour {
 		if (!beingHeld) {
 			if(canBeHeld)
 			{
+				if(discarded)
+				{
+					coolDownTimer-=Time.deltaTime;
+					if(coolDownTimer<0)
+					{
+						Destroy (gameObject);
+					}
+				}
+
 				return;
 			}
 
@@ -38,6 +49,7 @@ public class Holdable : MonoBehaviour {
 			{
 				//collider2D.enabled = true;
 				canBeHeld = true;
+				coolDownTimer = destructTime;
 			}
 			
 			return;
@@ -82,6 +94,7 @@ public class Holdable : MonoBehaviour {
 		rigidbody2D.isKinematic = false;
 		collider2D.enabled = true;
 		//collider2D.enabled = true;
+		discarded = true;
 	}
 	
 	void OnCollisionEnter2D(Collision2D coll) {
