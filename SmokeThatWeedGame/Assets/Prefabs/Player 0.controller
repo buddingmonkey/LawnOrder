@@ -144,9 +144,9 @@ Transition:
   m_TransitionDuration: .100000001
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
-    m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: player
+    m_EventTreshold: 3
     m_ExitTime: 3
   m_Atomic: 1
   m_Solo: 0
@@ -413,34 +413,6 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110201474}
-      second:
-      - {fileID: 110145400}
-    data:
-      first: {fileID: 110230210}
-      second:
-      - {fileID: 110109340}
-    data:
-      first: {fileID: 110275534}
-      second:
-      - {fileID: 110161686}
-    data:
-      first: {fileID: 110296748}
-      second:
-      - {fileID: 110110864}
-    data:
-      first: {fileID: 110220240}
-      second:
-      - {fileID: 110145970}
-    data:
-      first: {fileID: 110270946}
-      second:
-      - {fileID: 110140308}
-    data:
-      first: {fileID: 110263902}
-      second:
-      - {fileID: 110156490}
-    data:
       first: {fileID: 0}
       second:
       - {fileID: 110198980}
@@ -451,6 +423,34 @@ StateMachine:
       first: {fileID: 110217380}
       second:
       - {fileID: 110127678}
+    data:
+      first: {fileID: 110263902}
+      second:
+      - {fileID: 110156490}
+    data:
+      first: {fileID: 110201474}
+      second:
+      - {fileID: 110145400}
+    data:
+      first: {fileID: 110220240}
+      second:
+      - {fileID: 110145970}
+    data:
+      first: {fileID: 110230210}
+      second:
+      - {fileID: 110109340}
+    data:
+      first: {fileID: 110270946}
+      second:
+      - {fileID: 110140308}
+    data:
+      first: {fileID: 110275534}
+      second:
+      - {fileID: 110161686}
+    data:
+      first: {fileID: 110296748}
+      second:
+      - {fileID: 110110864}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 60, y: -120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

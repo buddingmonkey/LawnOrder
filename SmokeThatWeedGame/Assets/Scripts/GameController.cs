@@ -19,6 +19,8 @@ public class GameController : MonoBehaviour {
 		GameOver
 	}
 
+	public string[] levels;
+
 	public static GameState state;
 	public static int[] score = new int[4];
 
@@ -130,6 +132,10 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void PlayAgain() {
-		Application.LoadLevel (Application.loadedLevel);
+		if (levels.Length > 0) {
+			Application.LoadLevel (levels[Random.Range(0, levels.Length)]);
+		} else {
+			Application.LoadLevel (Application.loadedLevel);
+		}
 	}
 }

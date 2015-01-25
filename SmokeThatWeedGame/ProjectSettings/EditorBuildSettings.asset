@@ -4,4 +4,12 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Avi_King_Of_The_Pit.unity
+  - enabled: 1
+    path: Assets/Scenes/Avi_Wee_Devils.unity
+  - enabled: 1
+    path: Assets/Scenes/Avi_Weeping_Alien.unity
+  - enabled: 1
+    path: Assets/Scenes/Ricky_Roman_Garden.unity
