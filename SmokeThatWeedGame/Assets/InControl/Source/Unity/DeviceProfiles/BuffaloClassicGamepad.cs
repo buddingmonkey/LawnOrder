@@ -2,8 +2,8 @@
 using System.Collections;
 
 namespace InControl{
+	[AutoDiscover]
 	public class BuffaloClassicGamepad : UnityInputDeviceProfile {
-		[AutoDiscover]
 		public BuffaloClassicGamepad()
 		{
 			Name = " USB,2-axis 8-button gamepad";

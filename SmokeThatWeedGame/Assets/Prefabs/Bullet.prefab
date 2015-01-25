@@ -12,7 +12,8 @@ GameObject:
   - 114: {fileID: 11493798}
   - 61: {fileID: 6141116}
   - 114: {fileID: 11415026}
-  m_Layer: 0
+  - 50: {fileID: 5042184}
+  m_Layer: 16
   m_Name: Bullet
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -31,6 +32,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &5042184
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154046}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!61 &6141116
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -56,6 +72,7 @@ MonoBehaviour:
   damage: 1
   player: {fileID: 0}
   stopAfterHit: 1
+  health: {fileID: 0}
 --- !u!114 &11493798
 MonoBehaviour:
   m_ObjectHideFlags: 1

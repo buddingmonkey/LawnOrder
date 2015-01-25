@@ -4,6 +4,7 @@ using System.Collections;
 public class Shooter : MonoBehaviour {
 	public Transform currentProjectile;
 	public Transform[] projectiles;
+	public string[] weaponNames;
 	public InputControls inputControls;
 
 	public bool autoFire = true;
@@ -24,7 +25,7 @@ public class Shooter : MonoBehaviour {
 		float dx = inputControls.XAxis ();
 		// left/right
 		if (dx < 0 || dx == 0 && movement.direction < 0) {
-			location.x = transform.position.x - (location.x - transform.position.x);
+			//location.x = transform.position.x - (location.x - transform.position.x);
 			direction = -Vector3.right;
 		}
 
