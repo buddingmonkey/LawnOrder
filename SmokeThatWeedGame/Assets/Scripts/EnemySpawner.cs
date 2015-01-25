@@ -21,6 +21,7 @@ public class EnemySpawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		currentEnemyCount = 0;
 		timeSinceSpawn = spawnFrequency - spawnDelay;
 		if (randomStart) {
 			timeSinceSpawn = -spawnDelay + Random.Range(0, spawnFrequency);
