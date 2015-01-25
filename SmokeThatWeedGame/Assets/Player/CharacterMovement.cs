@@ -12,6 +12,7 @@ public class CharacterMovement : MonoBehaviour {
 	public float strikeRange = 1f;
 	public int playerNum;
 	public int direction = 1;
+	public ParticleSystem particles;
 	private InputControls input;
 	private RectTransform trans;
 	private float height;
@@ -24,8 +25,6 @@ public class CharacterMovement : MonoBehaviour {
 
 	int colliderMask = ~0x100;
 	new Rigidbody2D rigidbody;
-
-	private Animator animator;
 
 	enum PlayerState {
 		Grounded,
@@ -48,7 +47,7 @@ public class CharacterMovement : MonoBehaviour {
 		halfWidth = width / 2 * 0.95f;
 		state = PlayerState.Falling;
 
-		animator = GetComponent<Animator> ();
+	
 		//if (platformLayer == null)
 		//{
 			platformLayer = LayerMask.NameToLayer ("Platform");
@@ -82,6 +81,7 @@ public class CharacterMovement : MonoBehaviour {
 				}
 			}
 			if (hit.collider != null) {
+				particles.Stop();
 				state = PlayerState.Grounded;
 				Debug.DrawRay(hit.point,-Vector3.right*.1f,Color.red);
 				trans.position = new Vector2(trans.position.x, hit.point.y + halfHeight);
@@ -91,6 +91,7 @@ public class CharacterMovement : MonoBehaviour {
 		if (state == PlayerState.Grounded) {
 			if (input.IsJumpDown()) {
 				state = PlayerState.Jumping;
+				particles.Play();
 				jumpTime = 0;
 				rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpSpeed);
 				SfxManager.Instance.PlaySoundAt("Jump", trans.position);
@@ -130,7 +131,7 @@ public class CharacterMovement : MonoBehaviour {
 			direction = 1;
 		}
 		transform.localScale = new Vector3(direction, 1, 1);
-		animator.SetFloat ("speed",Mathf.Abs (vx));
+
 	}
 
 }

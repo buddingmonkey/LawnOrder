@@ -86,6 +86,7 @@ public class BaseEnemy : MonoBehaviour {
 		if (health < 0) {
 			Die(player);
 		}
+		ParticlePool.Instance.Spawn ("PlantBlood", transform.position + Vector3.up * (halfHeight * 2 * Random.Range(0,1f)));
 	}
 
 	void Die(int player) {
