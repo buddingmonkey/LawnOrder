@@ -67,9 +67,6 @@ public class WeaponSpawner : MonoBehaviour {
 					spawned.transform.position = transform.position;
 					spawned.RememberSpawner(this);
 
-
-					ChooseRandomWeapon();
-
 					foreach(GameObject tick in tickTocks)
 					{
 						tick.SetActive (false);
@@ -108,8 +105,10 @@ public class WeaponSpawner : MonoBehaviour {
 	{
 		grabbed = true;
 		theSprite.enabled = true;
+		Debug.Log("WEAPON: " + weaponInSight);
 		GameController.activeProjectile = s.projectiles[weaponInSight].name;
 		GameController.activeWeaponText = s.weaponNames[weaponInSight];
+		ChooseRandomWeapon();
 	}
 
 	private void ChooseRandomWeapon()

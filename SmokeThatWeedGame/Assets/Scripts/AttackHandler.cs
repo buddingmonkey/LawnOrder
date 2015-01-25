@@ -11,7 +11,7 @@ public class AttackHandler : MonoBehaviour {
 	public void OnTriggerEnter2D(Collider2D collider) {
 		if (collider.tag.Equals("Enemy")) {
 
-			if (this.tag != "Projectile" || this.name != GameController.activeProjectile){
+			if (this.tag != "Projectile" || this.name.Substring(0, this.name.Length - 7) == GameController.activeProjectile){
 				var enemy = collider.GetComponentInParent<BaseEnemy>();
 				Vector2 dir = new Vector2((collider.transform.position - transform.position).x > 0 ? 1 : -1, 0);
 				enemy.TakeDamage(damage, dir, player.playerNum);
