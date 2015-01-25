@@ -99,7 +99,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 239e1a968e7ee7e46811aed65c166627, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .430000007
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -163,6 +163,12 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: f38bff31181193d489c39eabcaefa8d6, type: 3}
   - name: Shoot
     clip: {fileID: 8300000, guid: 7c0be5c37b4ff92479532eaa855e6b91, type: 3}
+  - name: PlantDeath
+    clip: {fileID: 8300000, guid: bdcaec91d9d90a64bad0969629434899, type: 3}
+  - name: PlantDeath2
+    clip: {fileID: 8300000, guid: 13bb520487841d74bb9510f0284f783a, type: 3}
+  - name: PlantDeath3
+    clip: {fileID: 8300000, guid: 27e2cc02bfe20ec41ac536eed499e322, type: 3}
 --- !u!114 &11486086
 MonoBehaviour:
   m_ObjectHideFlags: 1
