@@ -3690,7 +3690,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300230, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
+  m_Sprite: {fileID: 21300090, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &315261439
 MonoBehaviour:
@@ -3907,6 +3907,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 398701013}
   - 61: {fileID: 398701012}
+  - 114: {fileID: 398701014}
   m_Layer: 0
   m_Name: WorldBound
   m_TagString: Untagged
@@ -3938,6 +3939,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1287649480}
   m_RootOrder: 1
+--- !u!114 &398701014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11417018, guid: 25cc84bafc77f4cbc96fbb1cc09db175,
+    type: 2}
+  m_PrefabInternal: {fileID: 179776194}
+  m_GameObject: {fileID: 398701011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f40d3589974b40a1a9ff09ccac88621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &410234382
 GameObject:
   m_ObjectHideFlags: 0
@@ -5608,7 +5621,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300230, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
+  m_Sprite: {fileID: 21300090, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &732462664
 MonoBehaviour:
@@ -5655,6 +5668,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 744881194}
   - 61: {fileID: 744881193}
+  - 114: {fileID: 744881195}
   m_Layer: 0
   m_Name: WorldBound
   m_TagString: Untagged
@@ -5686,6 +5700,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1287649480}
   m_RootOrder: 3
+--- !u!114 &744881195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11417020, guid: 25cc84bafc77f4cbc96fbb1cc09db175,
+    type: 2}
+  m_PrefabInternal: {fileID: 179776194}
+  m_GameObject: {fileID: 744881192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f40d3589974b40a1a9ff09ccac88621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &751015470
 GameObject:
   m_ObjectHideFlags: 0
@@ -9188,7 +9214,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300230, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
+  m_Sprite: {fileID: 21300090, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1461284391
 MonoBehaviour:
@@ -9419,6 +9445,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1494853385}
   - 61: {fileID: 1494853384}
+  - 114: {fileID: 1494853386}
   m_Layer: 0
   m_Name: WorldBound
   m_TagString: Untagged
@@ -9450,6 +9477,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1287649480}
   m_RootOrder: 2
+--- !u!114 &1494853386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11417016, guid: 25cc84bafc77f4cbc96fbb1cc09db175,
+    type: 2}
+  m_PrefabInternal: {fileID: 179776194}
+  m_GameObject: {fileID: 1494853383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f40d3589974b40a1a9ff09ccac88621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1509567681
 GameObject:
   m_ObjectHideFlags: 0
@@ -10034,7 +10073,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300230, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
+  m_Sprite: {fileID: 21300090, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1607002332
 MonoBehaviour:
@@ -10140,7 +10179,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300230, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
+  m_Sprite: {fileID: 21300090, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1613456943
 MonoBehaviour:
@@ -10529,6 +10568,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1634361211}
   - 61: {fileID: 1634361210}
+  - 114: {fileID: 1634361212}
   m_Layer: 0
   m_Name: WorldBound
   m_TagString: Untagged
@@ -10560,6 +10600,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1287649480}
   m_RootOrder: 0
+--- !u!114 &1634361212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11417014, guid: 25cc84bafc77f4cbc96fbb1cc09db175,
+    type: 2}
+  m_PrefabInternal: {fileID: 179776194}
+  m_GameObject: {fileID: 1634361209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f40d3589974b40a1a9ff09ccac88621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1637036322
 GameObject:
   m_ObjectHideFlags: 0
