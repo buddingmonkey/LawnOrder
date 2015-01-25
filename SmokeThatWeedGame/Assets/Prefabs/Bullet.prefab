@@ -10,10 +10,10 @@ GameObject:
   - 4: {fileID: 454046}
   - 212: {fileID: 21254046}
   - 114: {fileID: 11493798}
-  - 61: {fileID: 6141116}
   - 114: {fileID: 11415026}
   - 50: {fileID: 5042184}
   - 82: {fileID: 8218546}
+  - 58: {fileID: 5850858}
   m_Layer: 16
   m_Name: Bullet
   m_TagString: Projectile
@@ -28,8 +28,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.40639067, y: 3.46280313, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -12.5291691, y: -14.7086802, z: 0}
+  m_LocalScale: {x: .75, y: .75, z: .75}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -48,8 +48,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!61 &6141116
-BoxCollider2D:
+--- !u!58 &5850858
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -57,8 +57,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 1, y: .532243252}
-  m_Center: {x: 0, y: .233878136}
+  m_Radius: .5
+  m_Center: {x: 0, y: 0}
 --- !u!82 &8218546
 AudioSource:
   m_ObjectHideFlags: 1
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: addde3ed0619c48f1b27fe8b57eb7553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: 0
+  path: 4
   speed: 15
   direction: {x: 1, y: 0}
   velocity: {x: 0, y: 0}
@@ -169,7 +169,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300198, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a760a23b6f7e6a45ab952fa2c3d8538, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
