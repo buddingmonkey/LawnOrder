@@ -84,12 +84,14 @@ public class Holdable : MonoBehaviour {
 	public virtual void GetDropped(Vector2 impulse)
 	{
 		var attack = holder.GetComponent<PlayerAttack>();
+		Vector3 holderPos = holder.transform.position;
 		canBeHeld = false;
 		coolDownTimer = droppedCoolDown;
 		beingHeld = false;
 		attack.holdItem = null;
 		holder = null;
-		transform.SetParent(null);
+		transform.SetParent(null, true);
+		transform.position = holderPos;
 		rigidbody2D.velocity = impulse * dropSpeed;
 		rigidbody2D.isKinematic = false;
 		collider2D.enabled = true;

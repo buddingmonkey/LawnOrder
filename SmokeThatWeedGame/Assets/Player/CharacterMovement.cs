@@ -23,9 +23,11 @@ public class CharacterMovement : MonoBehaviour {
 	private float strikeTime;
 	private Vector2 pos2D;
 
+	const float distToGround = .08f;
+
 	private Animator animator;
 
-	int colliderMask = ~0x100;
+	int colliderMask = (~((1<<17)|(1<<18)));		// don't collide with weapons layer
 	new Rigidbody2D rigidbody;
 
 	enum PlayerState {
@@ -44,7 +46,7 @@ public class CharacterMovement : MonoBehaviour {
 		trans = GetComponent<RectTransform>();
 		rigidbody = GetComponent<Rigidbody2D>();
 		height = trans.rect.height;
-		width = trans.rect.width;
+		width = .6f; //trans.rect.width;
 		halfHeight = height / 2;
 		halfWidth = width / 2 * 0.95f;
 		state = PlayerState.Falling;
@@ -63,7 +65,7 @@ public class CharacterMovement : MonoBehaviour {
 	// Update is called once per frame
 
 	void Update () {
-		colliderMask = ~(1 << (10 + playerNum));
+		colliderMask &= ~(1 << (10 + playerNum));
 
 		Physics2D.IgnoreLayerCollision (playerLayer, platformLayer, rigidbody2D.velocity.y > 0);
 
@@ -75,19 +77,19 @@ public class CharacterMovement : MonoBehaviour {
 			state = PlayerState.Falling;
 
 		if (state != PlayerState.Jumping) {
-			Debug.DrawRay(pos2D + Vector2.right * halfWidth, -Vector3.up*.05f, Color.green);
-			RaycastHit2D hit = Physics2D.Raycast(pos2D + Vector2.right * halfWidth, -Vector2.up, .05f, colliderMask);
+			//Debug.DrawRay(pos2D + Vector2.right * halfWidth, -Vector3.up * distToGround, Color.green);
+			RaycastHit2D hit = Physics2D.Raycast(pos2D + Vector2.right * halfWidth, -Vector2.up, distToGround, colliderMask);
 			if (hit.collider == null) {
-				hit = Physics2D.Raycast(pos2D - Vector2.right * halfWidth, -Vector2.up, .05f, colliderMask);
+				hit = Physics2D.Raycast(pos2D - Vector2.right * halfWidth, -Vector2.up, distToGround, colliderMask);
 				if(hit.collider == null)
 				{//also check the middle with a raycast to see if you're on top of another player?
-					hit = Physics2D.Raycast(pos2D, -Vector2.up, .05f, colliderMask);
+					hit = Physics2D.Raycast(pos2D, -Vector2.up, distToGround, colliderMask);
 				}
 			}
 			if (hit.collider != null) {
 				particles.Stop();
 				state = PlayerState.Grounded;
-				Debug.DrawRay(hit.point,-Vector3.right*.1f,Color.red);
+				//Debug.DrawRay(hit.point,-Vector3.right*1f,Color.red);
 				trans.position = new Vector2(trans.position.x, hit.point.y + halfHeight);
 			}
 		}
@@ -129,13 +131,9 @@ public class CharacterMovement : MonoBehaviour {
 		Vector2 v = rigidbody.velocity;
 		float vx = dir * maxSpeed;
 		rigidbody.velocity = Vector2.Lerp(v, new Vector2(vx, v.y), maxAcceleration);
-		if (rigidbody.velocity.x < 0) {
-			direction = -1;
-		} else if (rigidbody.velocity.x > 0) {
-			direction = 1;
-		}
 		if (dir != 0) {
 			transform.localScale = new Vector3 (Mathf.Sign (dir), 1, 1);
+			direction = (int)Mathf.Sign (dir);
 		}
 		animator.SetFloat ("speed",Mathf.Abs (vx));
 	}
