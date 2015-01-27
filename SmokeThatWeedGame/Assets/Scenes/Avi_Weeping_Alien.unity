@@ -879,6 +879,7 @@ GameObject:
   - 222: {fileID: 95160536}
   - 114: {fileID: 95160535}
   - 114: {fileID: 95160534}
+  - 114: {fileID: 95160538}
   m_Layer: 5
   m_Name: P1 Score
   m_TagString: Untagged
@@ -915,7 +916,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5fb784c533f3648a39d9c367d24ba12a, type: 3}
-    m_FontSize: 16
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -951,6 +952,18 @@ RectTransform:
   m_AnchoredPosition: {x: 90, y: -24}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
+--- !u!114 &95160538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11496958, guid: 54e153eb450a143ce93341990e96023c,
+    type: 2}
+  m_PrefabInternal: {fileID: 75150309}
+  m_GameObject: {fileID: 95160533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed238a027e18b44a393c0636d12deae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &101012721
 GameObject:
   m_ObjectHideFlags: 0
@@ -7930,6 +7943,7 @@ GameObject:
   - 222: {fileID: 795515553}
   - 114: {fileID: 795515552}
   - 114: {fileID: 795515551}
+  - 114: {fileID: 795515554}
   m_Layer: 5
   m_Name: P3 Score
   m_TagString: Untagged
@@ -7984,7 +7998,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5fb784c533f3648a39d9c367d24ba12a, type: 3}
-    m_FontSize: 16
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -8002,6 +8016,18 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 75150309}
   m_GameObject: {fileID: 795515549}
+--- !u!114 &795515554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11496964, guid: 54e153eb450a143ce93341990e96023c,
+    type: 2}
+  m_PrefabInternal: {fileID: 75150309}
+  m_GameObject: {fileID: 795515549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed238a027e18b44a393c0636d12deae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &797572147
 GameObject:
   m_ObjectHideFlags: 0
@@ -10702,6 +10728,7 @@ GameObject:
   - 222: {fileID: 1256576265}
   - 114: {fileID: 1256576264}
   - 114: {fileID: 1256576263}
+  - 114: {fileID: 1256576266}
   m_Layer: 5
   m_Name: P2 Score
   m_TagString: Untagged
@@ -10756,7 +10783,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5fb784c533f3648a39d9c367d24ba12a, type: 3}
-    m_FontSize: 16
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -10774,6 +10801,18 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 75150309}
   m_GameObject: {fileID: 1256576261}
+--- !u!114 &1256576266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11496962, guid: 54e153eb450a143ce93341990e96023c,
+    type: 2}
+  m_PrefabInternal: {fileID: 75150309}
+  m_GameObject: {fileID: 1256576261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed238a027e18b44a393c0636d12deae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1272537459
 GameObject:
   m_ObjectHideFlags: 0
@@ -13228,6 +13267,7 @@ GameObject:
   - 222: {fileID: 1615464823}
   - 114: {fileID: 1615464822}
   - 114: {fileID: 1615464821}
+  - 114: {fileID: 1615464824}
   m_Layer: 5
   m_Name: Round Time
   m_TagString: Untagged
@@ -13299,6 +13339,18 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 75150309}
   m_GameObject: {fileID: 1615464819}
+--- !u!114 &1615464824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11496966, guid: 54e153eb450a143ce93341990e96023c,
+    type: 2}
+  m_PrefabInternal: {fileID: 75150309}
+  m_GameObject: {fileID: 1615464819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed238a027e18b44a393c0636d12deae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1617784490
 GameObject:
   m_ObjectHideFlags: 0
@@ -14083,6 +14135,8 @@ GameObject:
   - 222: {fileID: 1708227323}
   - 114: {fileID: 1708227322}
   - 114: {fileID: 1708227321}
+  - 114: {fileID: 1708227325}
+  - 95: {fileID: 1708227324}
   m_Layer: 5
   m_Name: Active Weapon
   m_TagString: Untagged
@@ -14105,8 +14159,8 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: .507290423, y: .97261858}
   m_AnchorMax: {x: .507290423, y: .97261858}
-  m_AnchoredPosition: {x: -2, y: -34}
-  m_SizeDelta: {x: 393, y: 37}
+  m_AnchoredPosition: {x: -5.18349981, y: -62}
+  m_SizeDelta: {x: 393, y: 67}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1708227321
 MonoBehaviour:
@@ -14136,8 +14190,8 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 139caff362d7a44f0a5c898935ec6b6a, type: 3}
-    m_FontSize: 30
-    m_FontStyle: 0
+    m_FontSize: 44
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -14154,6 +14208,34 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 75150309}
   m_GameObject: {fileID: 1708227319}
+--- !u!95 &1708227324
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9508716, guid: 54e153eb450a143ce93341990e96023c,
+    type: 2}
+  m_PrefabInternal: {fileID: 75150309}
+  m_GameObject: {fileID: 1708227319}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 87016eba0abf14f278a33ef568b6106c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1708227325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11496968, guid: 54e153eb450a143ce93341990e96023c,
+    type: 2}
+  m_PrefabInternal: {fileID: 75150309}
+  m_GameObject: {fileID: 1708227319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed238a027e18b44a393c0636d12deae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1725124351
 GameObject:
   m_ObjectHideFlags: 0
@@ -15026,9 +15108,11 @@ MonoBehaviour:
   - name: AnnounceFlamethrower
     clip: {fileID: 8300000, guid: 90c7efb1ff626984eb08c63c0e8c508a, type: 3}
   - name: AnnounceLawnmower
+    clip: {fileID: 8300000, guid: 806601aeab3b829419d956d59bd8094e, type: 3}
+  - name: AnnounceWeedwhacker
     clip: {fileID: 8300000, guid: 2ca9cbb95b665d04abd814d51eba1dd3, type: 3}
-  - name: AnnounceRainmaker
-    clip: {fileID: 8300000, guid: 2df0d79a7b1e65f49a746614b97789ba, type: 3}
+  - name: AnnounceAgentGreen
+    clip: {fileID: 8300000, guid: 3ae23e03964115e4a82cf9e3824f554f, type: 3}
 --- !u!4 &1796829524
 Transform:
   m_ObjectHideFlags: 0
@@ -18078,6 +18162,7 @@ GameObject:
   - 222: {fileID: 2128538428}
   - 114: {fileID: 2128538427}
   - 114: {fileID: 2128538426}
+  - 114: {fileID: 2128538429}
   m_Layer: 5
   m_Name: P4 Score
   m_TagString: Untagged
@@ -18132,7 +18217,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5fb784c533f3648a39d9c367d24ba12a, type: 3}
-    m_FontSize: 16
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -18150,6 +18235,18 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 75150309}
   m_GameObject: {fileID: 2128538424}
+--- !u!114 &2128538429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11496960, guid: 54e153eb450a143ce93341990e96023c,
+    type: 2}
+  m_PrefabInternal: {fileID: 75150309}
+  m_GameObject: {fileID: 2128538424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed238a027e18b44a393c0636d12deae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2129543105
 GameObject:
   m_ObjectHideFlags: 0

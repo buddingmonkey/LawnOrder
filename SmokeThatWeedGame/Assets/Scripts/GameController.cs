@@ -49,6 +49,12 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		// Camera adjustment
+		Camera.main.orthographicSize = 17.79f / Screen.width * Screen.height;
+
+		Camera.main.orthographicSize = Mathf.Max (10.01355f, Camera.main.orthographicSize);
+		Camera.main.backgroundColor = Color.black;
+
 		Reset ();
 		roundTime = roundLength;
 
@@ -109,6 +115,9 @@ public class GameController : MonoBehaviour {
 			winnerStr = "-- TIE --";
 		} else {
 			winnerStr = "Player " + (winners[0]+1).ToString() + " Wins!";
+			if (Random.Range (0,3) == 2) {
+				winnerStr += "HELP I'M TRAPPED IN THIS COMPUTER";
+			}
 		}
 		screenManager.ShowGameOver (winnerStr);
 	}
