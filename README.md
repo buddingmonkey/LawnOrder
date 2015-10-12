@@ -1,4 +1,4 @@
-# Lawn Order (Formerly "SmokeThatWeed")
+# Lawn Order
 
 [View this game on the Global Game Jam 2015 site](http://globalgamejam.org/2015/games/lawn-order)
 
